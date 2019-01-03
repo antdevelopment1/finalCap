@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300i,400,600,700');
+/* font-family: 'Kanit', sans-serif; */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +11,7 @@ body {
     background: -webkit-linear-gradient(to top, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
+    font-family: 'Kanit', sans-serif;
 }
 
 .testing {
@@ -24,8 +27,17 @@ body {
 .testing h1 {
     font-size: 7rem;
     color: white;
+    letter-spacing: 7px;
     /* text-shadow: 1px 1px 2px #456ef4; */
     text-shadow: 3px 3px 3px #333;
+    font-weight: 600;
+    
+}
+
+.testing p {
+    font-size: 35px;
+    color: white;
+    letter-spacing: 2px;
 }
 
 .testing-btn {
