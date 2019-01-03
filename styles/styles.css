@@ -28,11 +28,19 @@ body {
     text-shadow: 3px 3px 3px #333;
 }
 
-.testing-btn {
+.testing-buttons {
+    display: flex;
+    
+}
+
+.testing-btn-1,
+.testing-btn-2 {
     padding: .7rem 1rem;
     font-size: 26px;
     color: white;
     border: 3px solid #30d8c2;
     border-radius: 5px;
     text-decoration: none;
+    margin: 0 1rem;
 }
+
