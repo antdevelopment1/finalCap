@@ -15,7 +15,7 @@ body {
 }
 
 .testing {
-    padding: 16rem 0;
+    padding: 21rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,13 +38,22 @@ body {
     font-size: 35px;
     color: white;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 3px #333;
 }
 
-.testing-btn {
+.testing-buttons {
+    display: flex; 
+    margin-top: 3rem; 
+}
+
+.testing-btn-1,
+.testing-btn-2 {
     padding: .7rem 1rem;
     font-size: 26px;
     color: white;
     border: 3px solid #30d8c2;
     border-radius: 5px;
     text-decoration: none;
+    margin: 0 1rem;
 }
+
