@@ -1,0 +1,137 @@
+#include <SoftwareSerial.h>
+
+#include <ESP8266HTTPClient.h>
+#include <ESP8266WiFi.h>
+
+const char* ssid = "ENDOWED Underwear";
+const char* password = "endowwear";
+
+HTTPClient http;
+
+static const uint8_t D0   = 16;
+static const uint8_t D1   = 5;
+static const uint8_t D2   = 4;
+static const uint8_t D3   = 0;
+static const uint8_t D4   = 2;
+static const uint8_t D5   = 14;
+static const uint8_t D6   = 12;
+static const uint8_t D7   = 13;
+static const uint8_t D8   = 15;
+static const uint8_t D9   = 3;
+static const uint8_t D10  = 1;
+int featherPin = D8;
+
+//int trigPin = 13;
+//int echoPin = 12;
+//int ledPin = 10;
+//int hornPin = 11;
+//
+//int spaceIntruded;
+//
+//long duration, cm, inches;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(featherPin,INPUT);
+  
+  WiFi.begin(ssid, password);
+
+  while(WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.println("Waiting for connection");
+  }
+
+//  Serial.begin (9600);
+//  pinMode(trigPin, OUTPUT);
+//  pinMode(echoPin, INPUT);
+//  pinMode(ledPin, OUTPUT);
+//  pinMode(hornPin, OUTPUT);
+//  delay(5000);
+//  Serial.println("Armed...");
+  
+}
+
+void loop() {
+
+  if (WiFi.status() == WL_CONNECTED) {
+        Serial.println("yay connect");
+
+        http.begin("http://10.150.40.121:3000/");
+        http.addHeader("Content-Type", "text/plain");
+    
+        int httpCode = http.POST("Message from ESP8266");
+        String payload = http.getString();
+        Serial.println(payload);
+        http.end();
+        
+    } else {
+        Serial.println("Error in Wifi connection"); 
+    }
+//    digitalWrite(featherPin, HIGH);
+      int sensorValue = digitalRead(featherPin);
+//      sensorValue = digitalWrite(sensorValue, HIGH);
+      Serial.print(sensorValue);
+      int pin1 = digitalRead(D1);
+      int pin2 = digitalRead(D2);
+      int pin3 = digitalRead(D3);
+      int pin4 = digitalRead(D4);
+      int pin5 = digitalRead(D5);
+      int pin6 = digitalRead(D6);
+      int pin7 = digitalRead(D7);
+      Serial.print(pin1);
+      Serial.print(pin2);
+      Serial.print(pin3);
+      Serial.print(pin4);
+      Serial.print(pin5);
+      Serial.print(pin6);
+      Serial.print(pin7);
+      
+      
+    
+
+//    if (digitalRead(featherPin) == HIGH) {
+//      http.begin("http://10.150.40.121:3000/home");
+//      http.addHeader("Content-Type", "text/plain");
+//    
+//      int httpCode = http.POST("Message from ESP8266");
+//      String payload = http.getString();
+//      Serial.println(payload);
+//      Serial.print("hi");
+//      http.end();
+//      } else {
+//        Serial.print(featherPin);
+//        Serial.println("I am not hot");
+//      } 
+
+      
+//  digitalWrite(trigPin, LOW);
+//  delayMicroseconds(1);
+//  digitalWrite(trigPin, HIGH);
+//  delayMicroseconds(2);
+//  digitalWrite(trigPin, LOW);
+//
+//  pinMode(echoPin, INPUT);
+//  duration = pulseIn(echoPin, HIGH);
+//
+//  inches = (duration / 2) / 74;
+//  Serial.println(inches);
+//
+//  spaceIntruded = inches;
+//  
+//  if (spaceIntruded <= 50 || spaceIntruded >= 900){
+//      digitalWrite(ledPin, HIGH);
+//      digitalWrite(hornPin, HIGH); 
+//      Serial.println("Intruder Detected!");
+//      Serial.println("Sending text Notification...");
+//      delay(500);
+//      Serial.println("Armed...");
+//  }
+//  
+//  else{
+//    digitalWrite(hornPin, LOW);
+//    digitalWrite(ledPin, LOW);
+//  }
+    delay(30000);
+ 
+}
+

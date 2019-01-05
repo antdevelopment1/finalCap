@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300i,400,600,700');
+/* font-family: 'Kanit', sans-serif; */
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +11,13 @@ body {
     background: -webkit-radial-gradient(#eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
     background: radial-gradient(#eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
+    font-family: 'Kanit', sans-serif;
 }
 
 .landing-page { 
     height: 100%;
     width: 100%;
-    padding: 15rem 0;
+    padding: 19rem 0 24rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +28,7 @@ body {
     width: 100%;
     /* outline: 1px solid white; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem auto;
@@ -32,25 +36,49 @@ body {
 .title {
     font-size: 7rem;
     color: white;
+    letter-spacing: 7px;
     /* text-shadow: 1px 1px 2px #456ef4; */
-    text-shadow: 3px 3px 3px #333;
+    text-shadow: 5px 5px 5px #333;
+    font-weight: 600;
+    
+}
+
+.title-p {
+    font-size: 35px;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px #333;
 }
 
 .button-container {
-    display: flex;
-    /* outline: 1px solid white; */
+    height: 100%;
+    width: 70%;
+    margin-top: 1.5rem;
     padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    /* outline: 1px solid white; */
+   
 }
 
 .btn-1,
 .btn-2 {
-    padding: .7rem 1rem;
+    padding: .7rem 1.5rem;
     font-size: 26px;
-    color: white;
-    border: 3px solid #30d8c2;
-    border-radius: 5px;
+    color: rgba(255, 255, 255, .9);
+    border: 3px solid  #30d8c2;;
+    border-radius: 10px;
     text-decoration: none;
-    margin: 0 1rem;
-    box-shadow: 3px  3px 3px rgba(0, 0, 0, 0.5);
+    margin:  1rem 2.5rem;
+    box-shadow: 4px  4px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    background: transparent;
+    transition: box-shadow .1s ease-in-out .1s, transform .2s ease-in-out .1s;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    transform: scale(1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
 }
 
