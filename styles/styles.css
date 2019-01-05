@@ -17,15 +17,28 @@ body {
 .landing-page { 
     height: 100%;
     width: 100%;
-    padding: 19rem 0 24rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.header-container {
+    height: 100%;
+    width: 100%;
+    padding:  1rem 3rem 0 0 ;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register {
+    text-decoration: none;
+    color: white;
+}
 .title-container {
     height: 100%;
     width: 100%;
+    padding-top: 17rem;
     /* outline: 1px solid white; */
     display: flex;
     flex-direction: column;
@@ -53,7 +66,7 @@ body {
 .button-container {
     height: 100%;
     width: 70%;
-    margin-top: 1.5rem;
+    margin: 1.5rem auto 12rem auto;
     padding: 2rem 1rem;
     display: flex;
     justify-content: center;
