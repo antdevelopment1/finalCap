@@ -8,35 +8,43 @@
     const char* password = "endowwear";
     
     HTTPClient http;
-    
-    static const uint8_t D0   = 16;
-    static const uint8_t D1   = 5;
-    static const uint8_t D2   = 4;
-    static const uint8_t D3   = 0;
-    static const uint8_t D4   = 2;
-    static const uint8_t D5   = 14;
-    static const uint8_t D6   = 12;
-    static const uint8_t D7   = 13;
-    static const uint8_t D8   = 15;
-    static const uint8_t D9   = 3;
-    static const uint8_t D10  = 1;
-    
-    int featherPin = D3;
+//    int adcvalue = 0;
+//    
+//    static const uint8_t D0   = 16;
+//    static const uint8_t D1   = 5;
+//    static const uint8_t D2   = 4;
+//    static const uint8_t D3   = 0;
+//    static const uint8_t D4   = 2;
+//    static const uint8_t D5   = 14;
+//    static const uint8_t D6   = 12;
+//    static const uint8_t D7   = 13;
+//    static const uint8_t D8   = 15;
+//    static const uint8_t D9   = 3;
+//    static const uint8_t D10  = 1;
+//    
+//    int featherPin = D3;
     
     void setup() {
       Serial.begin(115200);
-      pinMode(featherPin, INPUT);
+//      pinMode(featherPin, INPUT);
+//        Serial.println(adcvalue);
+//        Serial.println("hello");
       
       WiFi.begin(ssid, password);
     
       while(WiFi.status() != WL_CONNECTED) {
-        delay(1);
+        delay(10);
         Serial.println("Waiting for connection");
       }
     }
     
     void loop() {
-      int sensorValue = analogRead(featherPin);
+//      int sensorValue = analogRead(A0);
+//      Serial.print(sensorValue);
+//      analogRead(A0)
+        int adcvalue = analogRead(A0);
+        Serial.println(adcvalue);
+        Serial.println("hello1");
     
       if (WiFi.status() == WL_CONNECTED) {
             Serial.println("yay connect");
@@ -53,21 +61,22 @@
             Serial.println("Error in Wifi connection"); 
         }
     
-        if (sensorValue > 850) {
+//        if (sensorValue > 850) {
+//          
+//          http.begin("http://10.150.40.121:3000/home");
+//          http.addHeader("Content-Type", "text/plain");
+//        
+//          int httpCode = http.POST("Message from ESP8266");
+//          String payload = http.getString();
+//          Serial.println(payload);
+//          Serial.print("hi");
+//          http.end();
+//          } else if (sensorValue < 850) {
+//            Serial.println(sensorValue);
+//            Serial.println("I am not hot");
+//          } 
+    
           
-          http.begin("http://10.150.40.121:3000/home");
-          http.addHeader("Content-Type", "text/plain");
-        
-          int httpCode = http.POST("Message from ESP8266");
-          String payload = http.getString();
-          Serial.println(payload);
-          Serial.print("hi");
-          http.end();
-          } else if (sensorValue < 850) {
-            Serial.println(sensorValue);
-            Serial.println("I am not hot");
-          } 
-     
     //  digitalWrite(trigPin, LOW);
     //  delayMicroseconds(1);
     //  digitalWrite(trigPin, HIGH);
@@ -98,4 +107,4 @@
         delay(1);
      
     }
-
+    
