@@ -1,3 +1,5 @@
+require('dotenv').config();
+const User = require('./models/User');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -6,10 +8,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.post("/", (req,res) => {
-//     console.log("howdy doodie");
-// })
-
+User.hello();
 // Make sure you use form-data to connect in postman
 app.post('/', (req, res) => {
     console.log(req.body);
@@ -26,8 +25,8 @@ app.post('/home', (req, res) => {
    });
 })
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000');
-})
+// app.listen(3000, () => {
+//     console.log('Listening on port 3000');
+// })
 
 
