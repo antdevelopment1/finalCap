@@ -15,12 +15,15 @@ app.post('/', (req, res) => {
     console.log(req.body);
     console.log("Send text message from twillio");
     res.json({
-         message: 'Helllo'
+        message: 'Helllo'
     });
 })
 
 app.post('/home', (req, res) => {
     console.log("Hey how are you");
+    res.json({
+        message: 'Helllo'
+   });
 })
 
 app.listen(3000, () => {
