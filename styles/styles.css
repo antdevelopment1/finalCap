@@ -39,35 +39,40 @@ body {
     height: 100%;
     width: 100%;
     padding-top: 17rem;
+    line-height: 7rem;
     /* outline: 1px solid white; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem auto;
 }
 .title {
-    font-size: 7.5rem;
+    font-size: 6.5rem;
     color: white;
-    letter-spacing: 7px;
+    letter-spacing: 1rem;
+    text-align: center;
+    /* outline: 1px solid red; */
     /* text-shadow: 1px 1px 2px #456ef4; */
     text-shadow: 5px 5px 5px #333;
     font-weight: 600;
 }
 
 .title-p {
-    font-size: 35px;
+    font-size: 2.3rem;;
+    font-weight: 400;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    padding-top: 1rem;
     text-shadow: 3px 3px 3px #333;
 }
 
 .button-container {
     height: 100%;
     width: 70%;
-    margin: 1.5rem auto 12rem auto;
+    margin: 0 auto 16rem auto;
     padding: 2rem 1rem;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     /* outline: 1px solid white; */
    
@@ -79,7 +84,7 @@ body {
     font-size: 26px;
     color: rgba(255, 255, 255, .9);
     border: 3px solid  #30d8c2;
-    border: 3px solid #eea849;
+    border: 2px solid rgba(238, 168, 73, .8);
     border-radius: 10px;
     text-decoration: none;
     margin:  1rem 2.5rem;
