@@ -12,17 +12,14 @@ app.use(bodyParser.json());
 // Make sure you use form-data to connect in postman
 app.post('/', (req, res) => {
     console.log(req.body);
-    console.log("Send text message from twillio");
-    res.json({
-        message: 'Helllo how are you today'
-    });
+   
 })
 
-app.post('/home', (req, res) => {
-    console.log("Hey how are you");
-    res.json({
-        message: 'Helllo'
-   });
+app.post('/intruder', (req, res) => {
+    console.log(req.body);
+//     res.json({
+//         message: 'Intruder from nodejs object'
+//    });
 })
 
 app.listen(3000, () => {
