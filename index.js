@@ -82,7 +82,45 @@ app.listen(3000, () => {
     //         console.log(userInstance);
     //     })
     
+    // =====================
+    //      Update User
+    // =====================
+
+    // Update user username
+    // User.getUserByUsername('hotstuff4')
+    //     .then(userInstance => {
+    //         userInstance.updateUsername('hotstuff')
+    //         .then(result => {
+    //             console.log(`${result} row has been affected`);
+    //         })
+    //     })
+        
+
+    // Update user password
+    // User.getUserByPassword('greatPassword')
+    //     .then(userInstance => {
+    //         userInstance.updatePassword('greatPassword11')
+    //             .then(rowCount => {
+    //                 console.log(`${rowCount} row has been affected`);
+    //             })
+    //     })
+
+    // Update user email
+    // User.getUserByEmail('yellow1@gmail.com')
+    //     .then(userInstance => {
+    //         userInstance.updateEmail('yellow@gmail.com')
+    //             .then(rowCount => {
+    //                 console.log(`${rowCount} row has been affected`);
+    //             })
+    //     })
     
+
+    // =====================
+    //      Delete User
+    // =====================
+
+    
+
 
     // ================================
     //     Create / Register Product
