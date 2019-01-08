@@ -129,7 +129,31 @@ class User {
     // =====================
 
     // Delete user by id
-    
+    static deleteById(id) {
+        return db.result(`delete from users where id=${id}`)
+            .then(result => {
+                if (result.rowCount === 1) {
+                    console.log('Your account has been deleted');
+                } else {
+                    console.log('Your account could not be deleted');
+                }
+                return result.rowCount;
+            })
+    }
+
+    // Delete user by username
+    static deleteByUsername(username) {
+        return db.result(`delete from users where username ilike '%$1:raw%'`,[username])
+            .then(result => {
+                if (result.rowCount === 1) {
+                    console.log('Your account has been deleted');
+                } else {
+                    console.log('Your account could not be deleted');
+                }
+                return result.rowCount;
+            })
+
+    }
 }
 
 module.exports = User;
