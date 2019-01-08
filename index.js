@@ -10,19 +10,25 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
-    console.log(req.body);  
+    console.log(req.body);
+    res.send(
+        {
+            wifiPass: "9020mndwmodw",
+            wifinet: "9393jhdjdd"
+        }
+    );
 })
 
 app.post('/intruder', (req, res) => {
-    console.log(req.body);
-    client.messages
-    .create({
-        body: 'Intruder detected. Please check your personal belongings.',
-        from: '+15709191853',
-        to: '+18622791359'
-    })
-    .then(message => console.log(message.sid))
-    .done();
+    // console.log(req.body);
+    // client.messages
+    // .create({
+    //     body: 'Intruder detected. Please check your personal belongings.',
+    //     from: '+15709191853',
+    //     to: '+18622791359'
+    // })
+    // .then(message => console.log(message.sid))
+    // .done();
 })
 
 app.listen(3000, () => {
