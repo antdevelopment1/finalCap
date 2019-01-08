@@ -35,6 +35,11 @@
             
             int httpCode = http.POST("success=Wifi Network is connected");
             String payload = http.getString();
+            Serial.print(payload);
+            Serial.print(payload);
+            Serial.print(payload);
+            Serial.print(payload);
+            
             http.end();
             
         } else {
