@@ -79,6 +79,57 @@ class User {
     //      Update User
     // =====================
 
+    // Update user username
+    updateUsername(username) {
+        return db.result(`update users set username=$2 where id=$1`, [this.id, username])
+            .then(updatedRow => {
+                if (updatedRow.rowCount === 1) {
+                    console.log('Your username has been updated');
+                } else {
+                    console.log('Error: Your username could not be updated')
+                }
+
+                return updatedRow.rowCount;
+            })
+        
+    }
+
+    // Update user password
+    updatePassword(password) {
+        console.log(password)
+        return db.result(`update users set user_password=$2 where id=$1`, [this.id, password])
+            .then(result => {
+                if (result.rowCount === 1) {
+                    console.log('Your password has been updated');
+                } else {
+                    console.log("Your password has not been updated");
+                }
+                return result.rowCount;
+            })
+
+    }
+
+    // Update user email
+    updateEmail(email) {
+        return db.result(`update users set email=$2 where id=$1`, [this.id, email])
+            .then(result => {
+                if (result.rowCount === 1) {
+                    console.log('The email has been updated');
+                } else {
+                    console.log('Your email could not be updated')
+                }
+                return result.rowCount;
+            })
+
+    }
+    
+
+    // =====================
+    //      Delete User
+    // =====================
+
+    // Delete user by id
+    
 }
 
 module.exports = User;
