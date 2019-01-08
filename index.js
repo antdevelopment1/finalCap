@@ -52,10 +52,37 @@ app.listen(3000, () => {
     //     Retrieve User
     // =====================
 
+    // Retrieve all users
+    // User.getAllUsers()
+        // .then(result => {
+        //     console.log(result);
+        // })
+
+    // Retrieve user by id
+    // User.getUserById(1)
+    //     .then(userIdInstance => {
+    //         console.log(userIdInstance);
+    //     })
+
+    // Retrieve user email
+    // User.getUserByEmail('antdevelopment1@gmail.com')
+    //     .then(userInstance => {
+    //         console.log(userInstance);
+    //     })
+
+    // Retrieve user username
+    // User.getUserByUsername('empathy91')
+    //     .then(userInstance => {
+    //         console.log(userInstance);
+    //     })
+
+    // Retrieve user password
+    // User.getUserByPassword('userpass03003')
+    //     .then(userInstance => {
+    //         console.log(userInstance);
+    //     })
     
-
-
-
+    
 
     // ================================
     //     Create / Register Product
