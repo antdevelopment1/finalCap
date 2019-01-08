@@ -119,17 +119,17 @@ app.listen(3000, () => {
     //      Delete User
     // =====================
 
-    // Delete user by id
-    User.deleteById(9)
-        .then(deleted => {
-            console.log(`${deleted} row has been affected`);
-        })
+    // // Delete user by id
+    // User.deleteById(9)
+    //     .then(deleted => {
+    //         console.log(`${deleted} row has been affected`);
+    //     })
 
-    // Delete user by username
-    User.deleteByUsername('username123')
-        .then(deleted => {
-            console.log(`${deleted} row has been affected`);
-        })
+    // // Delete user by username
+    // User.deleteByUsername('username123')
+    //     .then(deleted => {
+    //         console.log(`${deleted} row has been affected`);
+    //     })
 
 
 
