@@ -1,14 +1,30 @@
-INSERT INTO users (firstname, lastname, phone_number, email, username, user_password, wifi_network, wifi_password) 
-VALUES ('April', 'Copes', '1234567891', 'antdevelopment1@gmail.com', 'empathy91', 'lingo2555', 'wifi_network123', 'wifipass123');
-INSERT INTO users (firstname, lastname, username, phone_number, email, user_password, wifi_network, wifi_password) 
-VALUES ('Lauren', 'Wilkerson', '3334443456', 'laurenalyn@gmail.com', 'lillylove123', 'hillpassword456', 'wifinetwork444', 'wifipassword999');
-INSERT INTO users (firstname, lastname, phone_number, email, username, user_password, wifi_network, wifi_password) 
-VALUES ('Chris', 'Cruz', '3980380393', 'killergreen200@yahoo.com', 'userisnamed2', 'password9955', 'wifinet9494', 'wifipass030');
-INSERT INTO users (firstname, lastname, phone_number, email, username, user_password, wifi_network, wifi_password) 
-VALUES ('Beverly', 'Hill','8287475656', 'yellowgreen@aol.com', 'user999', 'userpasss000', 'wifinetgreen99393', 'wifipassword39393');
-INSERT INTO users (firstname, lastname, phone_number, email, username, user_password, wifi_network, wifi_password) 
-VALUES ('Shannon', 'Hill','9374892837', 'justinwing@gmail.com', 'username9494', 'userpass9373', 'wifinet9375', 'wifipass9428');
-INSERT INTO users (firstname, lastname, phone_number, email, username, user_password, wifi_network, wifi_password) 
-VALUES ('Wilson', 'Crow', '9283746578', 'justinwho@hotmail.com', 'username03932', 'userpass8273834', 'wifinet333333', 'wifipass039404');
-INSERT INTO users (firstname, lastname, phone_number, email, username, user_password, wifi_network, wifi_password) 
-VALUES ('Dawson', 'Creek', '8387476574', 'greenleaves@gmail.com', 'usercastedname222', 'userpass03003', 'wifinet0382393', 'wifipass0920202');
+INSERT INTO users (firstname, lastname, email, username, user_password) 
+VALUES ('April', 'Copes', 'antdevelopment1@gmail.com', 'empathy91', 'lingo2555');
+INSERT INTO users (firstname, lastname, username, email, user_password) 
+VALUES ('Lauren', 'Wilkerson', 'laurenalyn@gmail.com', 'lillylove123', 'hillpassword456');
+INSERT INTO users (firstname, lastname, email, username, user_password) 
+VALUES ('Chris', 'Cruz', 'killergreen200@yahoo.com', 'userisnamed2', 'password9955');
+INSERT INTO users (firstname, lastname, email, username, user_password) 
+VALUES ('Beverly', 'Hill', 'yellowgreen@aol.com', 'user999', 'userpasss000');
+INSERT INTO users (firstname, lastname, email, username, user_password) 
+VALUES ('Shannon', 'Hill', 'justinwing@gmail.com', 'username9494', 'userpass9373');
+INSERT INTO users (firstname, lastname, email, username, user_password) 
+VALUES ('Wilson', 'Crow', 'justinwho@hotmail.com', 'username03932', 'userpass8273834');
+INSERT INTO users (firstname, lastname, email, username, user_password) 
+VALUES ('Dawson', 'Creek', 'greenleaves@gmail.com', 'usercastedname222', 'userpass03003');
+
+
+INSERT INTO products(phone_number, user_id) 
+VALUES ('9393938473', 1);
+INSERT INTO products(phone_number, user_id) 
+VALUES ('30303837636', 2);
+INSERT INTO products(phone_number, user_id) 
+VALUES ('2094857283', 3);
+INSERT INTO products(phone_number, user_id) 
+VALUES ('0987653456', 4);
+INSERT INTO products(phone_number, user_id) 
+VALUES ('3937482983', 5);
+INSERT INTO products(phone_number, user_id) 
+VALUES ('3563783647', 6);
+INSERT INTO products(phone_number, user_id) 
+VALUES ('0987896789', 7);
