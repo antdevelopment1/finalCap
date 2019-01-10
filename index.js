@@ -128,6 +128,14 @@ app.post('/logout', (req, res) => {
 //   Once Inside User Dashboard
 // ================================
 
+// Register Product
+
+// Edit Profile
+
+// Update Username
+
+// Update Password
+
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');
