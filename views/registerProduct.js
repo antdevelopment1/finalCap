@@ -12,8 +12,8 @@ function registerPage() {
 <body>
     <div class="register-page">
             <nav class="nav-container">
-                    <div class="nav">
-                            <li><a href="/">HOME</a></li>
+                    <div class="nav register-nav">
+                            <li><a href="index.html">HOME</a></li>
                     </div>
                 </nav>
             <div class="register-form-title">
@@ -22,20 +22,20 @@ function registerPage() {
             </div>
                  <form action="#" class="register-product-form">  
                    <div class="register-form-child">
-                     <label for="text1" class="label ">Serial Number:</label>
+                     <label for="serialnum" class="label ">Serial Number:</label>
                      <div class="field">
-                       <input name="text1" id="text1"  type="text"  value="" placeholder="Serial Number" class="register-input" required>
+                       <input name="serialnum" id="serialnum"  type="text"  value="" placeholder="Serial Number" class="register-input" required>
                      </div>
                    </div>
                     <div class="register-form-child">
-                        <label for="text1" class="label">Phone Number:</label>
+                        <label for="tel1" class="label">Phone Number:</label>
                         <div class="field">
-                            <input name="text1" id="text1"  type="text"  value="" placeholder="Phone Number" class="register-input" required>
+                            <input name="tel1" id="tel1"  type="text"  value="" placeholder="Phone Number" class="register-input" required>
                         </div>
                     </div>
                    <div class="register-form-child register-submit">
                      <div class="register-submit-btn-container">
-                       <input id="saveForm" name="saveForm" type="submit" value="Register Product" class="register-submit-btn">
+                       <input id="reg-submit" name="saveForm" type="submit" value="Register Product" class="register-submit-btn">
                      </div>
                    </div>
                  </form>

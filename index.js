@@ -55,7 +55,6 @@ app.get('/', (req, res) => {
 // Sign Up Page Get Request
 app.get('/signup', (req, res) => {
     res.send(signUpPage());
-
 })
 
 // Sign Up Page Post Request
@@ -91,7 +90,7 @@ app.post('/login', (req, res) => {
                 res.redirect('/login');
             })
             .then(result => {
-                console.log(result)
+                console.log(result);
                 if (result.passwordDoesMatch(thePassword)) {
                     res.redirect('/dashboard');
                 } else {

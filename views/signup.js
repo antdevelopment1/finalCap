@@ -16,46 +16,46 @@ function signUpPage() {
                         </div>
                     </nav>
                 <header>
-                        <h1>Pseudo Secure Sign Up Form</h1> 
-                        <h2>Please fill in the information below to join the PS Initiative.</h2>
-                     </header>
-                     <form action="/signup" method="POST">  
-                       <div class="form-children">
-                         <label for="firstname" class="label">First Name:</label>
-                         <div class="field">
-                           <input name="firstname" id="firstname"  type="text"  value="" placeholder="First Name" required>
-                         </div>
-                       </div>
-                        <div class="form-children">
-                            <label for="lastname" class="label">Last Name:</label>
-                            <div class="field">
-                                <input name="lastname" id="lastname"  type="text"  value="" placeholder="Last Name" required>
-                            </div>
+                  <h1>Pseudo Secure Sign Up Form</h1> 
+                  <h2>Please fill in the information below to join the PS Initiative.</h2>
+                </header>
+                     <form action="/signup"  method="post" class="signup-form">  
+                      <div class="signup-form-child">
+                        <label for="firstname" class="label ">First Name:</label>
+                        <div class="field">
+                          <input name="firstname" id="firstname"  type="text"  value="" placeholder="First Name" class="signup-input" required>
                         </div>
-                       <div class="form-children">
-                         <label for="email1" class="label">Email:</label>
-                         <div class="field">
-                           <input name="email1" id="email1" type="email" spellcheck="false"  value="" placeholder="Email field" required> 
-                         </div>
+                      </div>
+                       <div class="signup-form-child">
+                           <label for="lastname" class="label">Last Name:</label>
+                           <div class="field">
+                               <input name="lastname" id="lastname"  type="text"  value="" placeholder="Last Name" class="signup-input" required>
+                           </div>
                        </div>
-                       <div class="form-children">
-                            <label for="username" class="label">Username:</label>
-                            <div class="field">
-                                <input name="username" id="username"  type="text"  value="" placeholder=Username required>
-                            </div>
+                       <div class="signup-form-child">
+                        <label for="email" class="label">Email:</label>
+                        <div class="field">
+                            <input name="email" id="email"  type="email"  value="" placeholder="Email" class="signup-input" required>
                         </div>
-                        <div class="form-children">
-                            <label for="password" class="label">Password:</label>
-                            <div class="field">
-                              <input name="password" id="password"  type="text"  value="" placeholder=Password required>
-                            </div>
+                      </div>
+                      <div class="signup-form-child">
+                        <label for="username" class="label">Username:</label>
+                        <div class="field">
+                            <input name="username" id="username"  type="text"  value="" placeholder="Username" class="signup-input" required>
                         </div>
-                       <div class="form-children">
-                         <div class="field">
-                           <input id="saveForm" name="saveForm" type="submit" value="Sign Up">
-                         </div>
-                       </div>
-                     </form>
+                    </div>
+                  <div class="signup-form-child">
+                    <label for="password" class="label">Password:</label>
+                    <div class="field">
+                        <input name="password" id="password"  type="text"  value="" placeholder="Password" class="signup-input" required>
+                    </div>
+                  </div>
+                      <div class="signup-form-child signup-submit">
+                        <div class="signup-submit-btn-container">
+                          <input id="signup-submit" name="saveForm" type="submit" value="Sign Up" class="signup-submit-btn">
+                        </div>
+                      </div>
+                    </form>
         <script src="scripts/index.js"></script>
     </body>
     </html>`;

@@ -17,7 +17,7 @@ function homePage() {
                     <li><a href="/login">LOGIN</a></li>
             </div>
         </nav>
-        <div class="title-container">
+        <div class="title-container"> 
             <h1 class="title">The Pseudo Secure Initiative</h1>
 
             <p class="title-p">No one should have to budget for peace of mind.</p>
