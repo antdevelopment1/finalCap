@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300i,400,600,700');
+/* font-family: 'Kanit', sans-serif; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: -webkit-radial-gradient(#1488CC, #2B32B2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(#1488CC, #2B32B2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .9);
+}
+
+li {
+    list-style: none;
+}
+
+
+.landing-page { 
+    animation: .7s fadein .4s forwards;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+/* .header-container {
+    height: 100%;
+    width: 100%;
+    padding:  1rem 4rem 0 0 ;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register {
+    text-decoration: none;
+    color: white;
+} */
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 75px;
+    width: 100%;
+    /* padding: 35px 35px 0px 35px; */
+    /* outline: 1px solid red; */
+}
+
+.nav-container .nav{
+    display: flex;
+    height: 68px;
+    flex-basis: 100%;
+    justify-content: flex-end;
+    align-content: center;
+    padding-right: 15px;
+    /* outline: 2px solid green; */
+    /* margin-bottom: 180px; */
+}
+
+
+.nav-container .nav li {
+    /* outline: 1px solid blue; */
+    /* display: flex; */
+    padding: 13px 30px;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+}
+
+.nav-container .nav li a {
+    /* outline: 1px solid blue; */
+    padding-bottom: 5px;
+    transition: border-bottom .3s ease-out .2s, opacity .3s ease-in-out .3s;
+    opacity: .8;
+}
+
+.nav-container .nav li a:hover,
+.sitcky .nav li a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, .9);
+    opacity: .6;
+}
+
+.nav-container .nav li a:focus,
+.sticky .nav li a:focus {
+    opacity: .6;
+    border-bottom: 1px solid white;
+}
+.title-container {
+    height: 100%;
+    width: 100%;
+    padding-top: 10rem;
+    line-height: 7rem;
+    /* outline: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-size: 6.5rem;
+    color: white;
+    letter-spacing: 1rem;
+    text-align: center;
+    /* outline: 1px solid red; */
+    /* text-shadow: 1px 1px 2px #456ef4; */
+    text-shadow: 5px 5px 5px #333;
+    font-weight: 600;
+}
+
+.title-p {
+    font-size: 2.3rem;;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 3px;
+    padding-top: 1rem;
+    text-shadow: 3px 3px 3px #333;
+}
+
+.button-container {
+    height: 100%;
+    width: 70%;
+    margin: 0 auto 10rem auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* outline: 1px solid white; */
+   
+}
+
+.btn-1,
+.btn-2 {
+    padding: .7rem 1.5rem;
+    font-size: 26px;
+    color: rgba(255, 255, 255, .9);
+    border: 3px solid  #30d8c2;
+    border: 2px solid rgba(238, 168, 73, .8);
+    border-radius: 10px;
+    text-decoration: none;
+    margin:  1rem 2.5rem;
+    box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    background: transparent;
+    transition: box-shadow .1s ease-in-out .1s, transform .2s ease-in-out .1s;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    transform: scale(1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+
+/* ================================== */
+            /* Sign Up Page */
+/* ================================== */
+
+h1 { 
+    font-size: 3rem;
+    margin-top: 50px;
+}
+h2 { 
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+}
+
+h1, h2 {
+    color: rgba(0, 0, 0, .8);
+    text-align: center;
+    /* outline: 1px solid green; */
+    padding: 5px;
+}
+
+form { 
+    font-size: 1.4rem; color: #222;
+}
+
+form .form-children{
+    font-size: 30px;
+    /* outline: 1px solid green; */
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    margin: 0 0 6px 0;
+    padding: 10px;
+}
+input[type="text"], input[type="email"], input[type="tel"] {
+    font-size: 23px;
+    width: 80%;
+    padding: 16px 20px;
+    text-align: center;
+    border-radius: 7px;
+    letter-spacing: 2px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
+    margin-left: 10%;
+}
+
+input[type="submit"] {
+    /* outline: 1px solid red; */
+    font-size: 25px;
+    color: rgba(0, 0, 0, .6);
+    width: 25%;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
+    margin-left: 10%;
+    margin: 30px 0 60px 30px;
+}
+
+form .form-children .label{
+    width: 900px;
+    /* outline: 3px solid red; */
+    flex: 1; 
+
+    text-align: right; 
+    margin: 0 5px 0 5px;
+    padding: 10px;
+}
+form .form-children .field{
+    /* width: 50px; */
+    width: 0px;
+    /* outline: 3px solid green; */
+  flex: 3;
+}
+form .form-children:last-child{
+  display: flex;
+  justify-content: flex-end;
+}
+form .form-children:last-child .field{
+    text-align: center;
+    /* outline: 1px solid red; */
+  /* max-width: 100%; */
+}
+
+
+/* ================================== */
+          /* Register Page */
+/* ================================== */
+.registerh1 {
+    margin-top: 100px;
+}
+form .register {
+    margin-top: 100px;
+    /* outline: 1px solid red; */
+}
+
+form .register1 {
+    margin-bottom: 175px;
+    /* outline: 1px solid red; */
+}
+
+
+
