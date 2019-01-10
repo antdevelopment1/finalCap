@@ -361,7 +361,8 @@ form .form-children:last-child .field{
 }
 
 .register-product-form,
-.login-form {
+.login-form,
+.signup-form {
     height: 100%;
     width: 60%; 
     margin: 5rem auto 12rem auto;
@@ -373,7 +374,8 @@ form .form-children:last-child .field{
 }
 
 .register-form-child,
-.login-form-child {
+.login-form-child,
+.signup-form-child {
     font-size: 1.9rem;
     /* outline: 1px solid green; */
     height: 100%;
@@ -388,7 +390,8 @@ form .form-children:last-child .field{
 }
 
 .register-form-child .label,
-.login-form-child .label {
+.login-form-child .label,
+.signup-form-child .label {
     /* outline: 1px solid purple; */
     display: flex;
     justify-content: center;
@@ -396,7 +399,8 @@ form .form-children:last-child .field{
 }
 
 .register-form-child .field,
-.login-form-child .field {
+.login-form-child .field,
+.signup-form-child .field{
     display: flex;
     /* outline: 1px solid blue; */
     width: 100%;
@@ -404,7 +408,8 @@ form .form-children:last-child .field{
 }
 
 .register-input,
-.login-input {
+.login-input,
+.signup-input {
     /* outline: 1px solid green; */
     font-size: 1.6rem;
     width: 100%;
@@ -418,21 +423,25 @@ form .form-children:last-child .field{
 }
 
 .register-submit-btn-container,
-.login-submit-btn-container {
-    /* outline: 1px solid white; */
+.login-submit-btn-container,
+.signup-submit-btn-container {
+    /* outline: 4px solid white;  */
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .register-submit-btn-container .register-submit-btn,
-.login-submit-btn-container .login-submit-btn {
+.login-submit-btn-container .login-submit-btn,
+.signup-submit-btn-container .signup-submit-btn {
   /* outline: 1px solid red; */
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   font-size: 1.6rem;
   color: rgba(0, 0, 0, .6);
   width: 50%;
@@ -450,7 +459,8 @@ form .form-children:last-child .field{
     }
 
     .register-product-form,
-    .login-form {
+    .login-form,
+    .signup-form {
         height: 100%;
         width: 60%; 
         margin: 0 auto 12rem auto;
@@ -462,7 +472,8 @@ form .form-children:last-child .field{
     }
 
     .register-form-child,
-    .login-form-child {
+    .login-form-child,
+    .signup-form-child {
         font-size: 30px;
         height: 100%;
         width: 100%;
@@ -476,17 +487,20 @@ form .form-children:last-child .field{
     }
 
     .register-form-child .label,
-    .login-form-child .label {
+    .login-form-child .label,
+    .signup-form-child .label{
         font-size: 1.6rem;
     }
 
     .register-input,
-    .login-input {
+    .login-input,
+    .signup-input {
         font-size: 1.4rem;
     }
 
     .register-submit-btn-container,
-    .login-submit-btn-container {
+    .login-submit-btn-container,
+    .signup-submit-btn-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -494,7 +508,8 @@ form .form-children:last-child .field{
     align-content: center;
 }
 .register-submit-btn-container .register-submit-btn,
-.login-submit-btn-container .login-submit-btn {
+.login-submit-btn-container .login-submit-btn,
+.signup-submit-btn-container .signup-submit-btn {
         font-size: 1.3rem;
         color: rgba(0, 0, 0, .6);
         width: 50%;
@@ -516,18 +531,21 @@ form .form-children:last-child .field{
     }
 
     .register-form-child .label,
-    .login-form-child .label {
+    .login-form-child .label,
+    .signup-form-child .label {
         font-size: 1.3rem;
     }
 
     .register-form-child .field .register-input,
-    .login-form-child .field .login-input {
+    .login-form-child .field .login-input,
+    .signup-form-child .field .signup-input {
         font-size: 1rem;
         /* outline: 2px solid red; */
     }
 
     .register-submit-btn-container .register-submit-btn,
-    .login-submit-btn-container .login-submit-btn {
+    .login-submit-btn-container .login-submit-btn,
+    .signup-submit-btn-container .signup-submit-btn {
         font-size: 1.1rem;
         width: 50%;
     }
@@ -535,7 +553,8 @@ form .form-children:last-child .field{
 
 @media screen and (max-width: 900px) {
     .register-submit-btn-container .register-submit-btn,
-    .login-submit-btn-container .login-submit-btn {
+    .login-submit-btn-container .login-submit-btn,
+    .signup-submit-btn-container .signup-submit-btn {
         font-size: 1rem;
         padding: 15px 25px;
     }
@@ -543,14 +562,17 @@ form .form-children:last-child .field{
 
 @media screen and (max-width: 850px) {
     .register-form-child .label,
-    .login-form-child .label {
+    .login-form-child .label,
+    .signup-form-child .label {
         width: 70%;
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .register-form-child {
+    .register-form-child,
+    .login-form-child,
+    .signup-form-child {
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -560,11 +582,14 @@ form .form-children:last-child .field{
 }
 
 @media screen and (max-width: 600px) {
-    .register-form-child .field {
+    .register-form-child .field,
+    .login-form-child .field,
+    .signup-form-child .field, {
         width: 100%;
     }
     .register-submit-btn-container .register-submit-btn,
-    .login-submit-btn-container .login-submit-btn {
+    .login-submit-btn-container .login-submit-btn,
+    .signup-submit-btn-container .signup-submit-btn {
         font-size: 1rem;
         text-align: center;
         width: 70%;
