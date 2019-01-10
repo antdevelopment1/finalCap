@@ -10,33 +10,33 @@ function loginPage() {
     <title>Affordable Security Alert</title>
 </head>
 <body>
-    <div class="landing-page">
+    <div class="login-page">
             <nav class="nav-container">
                     <div class="nav">
                             <li><a href="/">HOME</a></li>
                         
                     </div>
                 </nav>
-            <header>
-                    <h1 class="registerh1">Pseudo Secure Login In Form</h1> 
+                <div class="login-form-title">
+                    <h1 class="login-title">Pseudo Secure Login In Form</h1> 
                     <h2>Please fill in the information below to login to your account.</h2>
-                 </header>
-                 <form action="#" class="register-product-form">  
-                  <div class="register-form-child">
+                </div>
+                 <form action="/login" method="POST" class="login-form">  
+                  <div class="login-form-child">
                     <label for="username" class="label">Username:</label>
                     <div class="field">
-                      <input name="username" id="username"  type="text"  value="" placeholder="Username" class="register-input" required>
+                      <input name="username" id="username"  type="text"  value="" placeholder="Username" class="login-input" required>
                     </div>
                   </div>
-                   <div class="register-form-child">
+                   <div class="login-form-child">
                        <label for="password" class="label">Password:</label>
                        <div class="field">
-                           <input name="password" id="password"  type="text"  value="" placeholder="Password" class="register-input" required>
+                           <input name="password" id="password"  type="text"  value="" placeholder="Password" class="login-input" required>
                        </div>
                    </div>
-                  <div class="register-form-child register-submit">
-                    <div class="register-submit-btn-container">
-                      <input id="reg-submit" name="saveForm" type="submit" value="Login" class="register-submit-btn">
+                  <div class="login-form-child login-submit">
+                    <div class="login-submit-btn-container">
+                      <input id="login-submit" name="saveForm" type="submit" value="Login" class="login-submit-btn">
                     </div>
                   </div>
                 </form>

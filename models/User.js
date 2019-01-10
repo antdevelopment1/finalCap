@@ -11,6 +11,10 @@ class User {
         this.user_password = user_password;
     }
 
+    passwordDoesMatch(thePassword) {
+        return this.user_password === thePassword;
+    }
+
     
     // =====================
     //      Create User
