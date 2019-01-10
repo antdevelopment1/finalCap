@@ -22,14 +22,29 @@ class Product {
     // =====================
 
     // Retrieve all products
+    static getAllProducts() {
+        return db.any(`select * from products`)
+    }
 
     // Retrieve product by id
+    static getProductById(id) {
+        return db.one(`select * from products where id = ${id}`)
+    }
 
     // Retrieve product by serialNumber
+    static getProductBySerialNumber(serialNumber) {
+        return db.one(`select * from products where serial_number ilike '%$1:raw%'`, [serialNumber])
+    }
 
     // Retrieve phone number
+    static getProductByPH(pHNumber) {
+        return db.any(`select * from products where phone_number ilike '%$1:raw%'`, [pHNumber])
+    }
 
-    // Retrieve user by product id
+    // Retrieve user by user id
+    static getProductByUserId(user_id) {
+        return db.one(`select * from products where user_id = ${user_id}`)
+    }
     
     // =====================
     //        Update
