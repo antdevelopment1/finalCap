@@ -283,7 +283,6 @@ form .form-children:last-child .field{
     display: flex; 
     margin: 0 0 6px 0;
     padding: 10px;
-
     /* outline: 2px solid green; */
     display: flex;
     justify-content: space-between;
@@ -301,14 +300,157 @@ form .form-children:last-child .field{
     width: 70%;
 }
 
+.register-input {
+    font-size: 1.6rem;
+    width: 80%;
+    padding: 16px 20px;
+    text-align: center;
+    border-radius: 7px;
+    letter-spacing: 2px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
+    /* margin-left: 10%; */
+    /* outline: 1px solid red; */
+}
 
-.register-submit-btn {
+.register-submit {
+    /* outline: 1px solid red; */
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, .6);
+    /* width: 25%; */
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.register-submit-btn-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+.register-submit-btn-container .register-submit-btn {
+  /* outline: 1px solid red; */
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, .6);
+  width: 25%;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
+  /* margin-left: 10%; */
+  margin: 30px 0 60px 30px;
 }
 
 
+
+
+/* REGISTER PG MEDIA QUERIES */
+
+@media screen and (max-width: 1300px) {
+    .register-title {
+        margin-top: 5rem;
+    }
+
+    .register-product-form {
+        height: 100%;
+        width: 60%; 
+        margin: 0 auto 12rem auto;
+        /* outline: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .register-form-child {
+        font-size: 30px;
+        /* outline: 1px solid green; */
+        height: 100%;
+        width: 100%;
+        display: flex; 
+        margin: 0 0 2px 0;
+        padding: 10px;
+        /* outline: 2px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* flex-direction: column; */
+    }
+
+    .register-form-child .label {
+        font-size: 1.6rem;
+    }
+
+    .register-input {
+        font-size: 1.4rem;
+    }
+
+    .register-submit-btn-container {
+    /* outline: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.register-submit-btn-container .register-submit-btn {
+        /* outline: 1px solid red; */
+        font-size: 1.3rem;
+        color: rgba(0, 0, 0, .6);
+        width: 40%;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 7px;
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .nav-container .nav li {
+        letter-spacing: 1.5px;
+        font-size: 1.4rem;
+    }
+    
+    .register-title {
+        margin-top: 2rem;
+    }
+
+    .register-form-child {
+        font-size: 30px;
+        /* outline: 1px solid green; */
+        height: 100%;
+        width: 100%;
+        display: flex; 
+        margin: 0 0 2px 0;
+        padding: 10px;
+        /* outline: 2px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        /* flex-direction: column; */
+    }
+
+    .register-form-child .label {
+        font-size: 1.3rem;
+    }
+
+    .register-form-child .field .register-input {
+        font-size: 1rem;
+    }
+
+    .register-submit-btn-container .register-submit-btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .register-submit-btn-container .register-submit-btn {
+        font-size: 1rem;
+        width: 50%;
+        padding: 15px 25px;
+    }
+}
 
 
 
