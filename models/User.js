@@ -95,7 +95,6 @@ class User {
 
     // Update user password
     updatePassword(password) {
-        console.log(password)
         return db.result(`update users set user_password=$2 where id=$1`, [this.id, password])
             .then(result => {
                 if (result.rowCount === 1) {
