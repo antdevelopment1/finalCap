@@ -5,7 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     /* outline: 1px solid purple; */
+    outline: none;
 }
+
 
 body {
     font-family: 'Kanit', sans-serif;
@@ -54,15 +56,14 @@ li {
 
 .nav-container .nav{
     display: flex;
-    height: 68px;
+    height: 4.2rem;
     flex-basis: 100%;
     justify-content: flex-end;
     align-content: center;
-    padding-right: 15px;
+    padding-right: 1rem;
     /* outline: 2px solid green; */
     /* margin-bottom: 180px; */
 }
-
 
 .nav-container .nav li {
     /* outline: 1px solid blue; */
@@ -74,34 +75,34 @@ li {
 
 .nav-container .nav li a {
     /* outline: 1px solid blue; */
-    padding-bottom: 5px;
+    padding-bottom: .3rem;
     transition: border-bottom .3s ease-out .2s, opacity .3s ease-in-out .3s;
     opacity: .8;
 }
-
 
 .nav-container .nav li a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, .9); 
     opacity: .6;
 }
 
-
-
 .title-container {
     height: 100%;
     width: 100%;
-    padding-top: 12rem;
-    line-height: 7rem;
+    padding: 12rem 0;
     /* outline: 1px solid white; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .title {
+    width: 100%;
+    /* padding: 0 1rem; */
     font-size: 6.5rem;
     color: white;
+    line-height: 7rem;
     letter-spacing: 1rem;
     text-align: center;
     /* outline: 1px solid red; */
@@ -111,7 +112,9 @@ li {
 }
 
 .title-p {
-    font-size: 2.3rem;;
+    width: 90%;
+    text-align: center;
+    font-size: 2.3rem;
     font-weight: 400;
     color: white;
     letter-spacing: 3px;
@@ -151,7 +154,97 @@ li {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
 }
 
+
 /* MEDIA QUERIES FOR LANDING PAGE */
+
+@media screen and (max-width: 1300px) {
+    .title-container {
+        padding: 0 0 1rem 0;
+        /* outline: 1px solid white; */
+    }
+
+    .title {
+        font-size: 6rem;
+    }
+
+    .title-p {
+        font-size: 2.1rem;
+        padding-top: .5rem;
+    }
+
+    .button-container {
+        /* outline: 1px solid white; */
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .title {
+        font-size: 5.8rem;
+    }
+
+    .title-p {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 5.6rem;
+    }
+
+    .title-p {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .button-container {
+        width: 100%;
+    }
+    
+    .btn-1,
+    .btn-2 {
+        padding: .7rem 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 4.5rem;
+    }
+    .title-p {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    
+    .nav-container .nav{
+        justify-content: space-evenly;
+        /* padding-right: 0rem; */
+        /* outline: 2px solid green; */
+    }
+    
+    .title {
+        width: 100%;
+        line-height: 5rem;
+        font-size: 3.5rem;
+    }
+
+    .button-container {
+        /* padding-top: 1rem; */
+        flex-direction: column;
+    }
+
+    .btn-1, .btn-2 {
+        text-align: center;
+    }
+}
 
 
 
@@ -192,34 +285,34 @@ form .form-children{
 }
 
 input[type="text"], input[type="email"], input[type="tel"] {
-    font-size: 23px;
+    font-size: 1.3rem;
     width: 80%;
     padding: 16px 20px;
     text-align: center;
     border-radius: 7px;
     letter-spacing: 2px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 input[type="submit"] {
     /* outline: 1px solid red; */
-    font-size: 25px;
+    font-size: 1.4rem;
     color: rgba(0, 0, 0, .6);
+    /* color: blue; */
     width: 25%;
-    padding: 10px 10px;
+    padding: 10px;
     text-align: center;
     border-radius: 7px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
-    margin-left: 10%;
-    margin: 30px 0 60px 30px;
+    /* margin-left: 10%;
+    margin: 30px 0 60px 30px; */
 }
 
 form .form-children .label{
     width: 900px;
     /* outline: 3px solid red; */
     flex: 1; 
-
     text-align: right; 
     margin: 0 5px 0 5px;
     padding: 10px;
@@ -276,12 +369,12 @@ form .form-children:last-child .field{
 }
 
 .register-form-child {
-    font-size: 30px;
+    font-size: 1.9rem;
     /* outline: 1px solid green; */
     height: 100%;
     width: 100%;
     display: flex; 
-    margin: 0 0 6px 0;
+    /* margin: 0 0 6px 0; */
     padding: 10px;
     /* outline: 2px solid green; */
     display: flex;
@@ -290,19 +383,23 @@ form .form-children:last-child .field{
 }
 
 .register-form-child .label {
+    /* outline: 1px solid purple; */
     display: flex;
-    justify-content: flex-end;
-    width: 30%;
+    justify-content: center;
+    width: 50%;
 }
 
 .register-form-child .field {
+    display: flex;
     /* outline: 1px solid blue; */
-    width: 70%;
+    width: 100%;
+    justify-content: center;
 }
 
 .register-input {
+    /* outline: 1px solid green; */
     font-size: 1.6rem;
-    width: 80%;
+    width: 100%;
     padding: 16px 20px;
     text-align: center;
     border-radius: 7px;
@@ -312,18 +409,9 @@ form .form-children:last-child .field{
     /* outline: 1px solid red; */
 }
 
-.register-submit {
-    /* outline: 1px solid red; */
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, .6);
-    /* width: 25%; */
-    padding: 10px 15px;
-    text-align: center;
-    border-radius: 7px;
-}
-
 .register-submit-btn-container {
-    width: 100%;
+    /* outline: 1px solid white; */
+    width: 50%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -331,19 +419,16 @@ form .form-children:last-child .field{
 
 .register-submit-btn-container .register-submit-btn {
   /* outline: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
   font-size: 1.6rem;
   color: rgba(0, 0, 0, .6);
-  width: 25%;
-  padding: 10px 10px;
+  width: 50%;
   text-align: center;
   border-radius: 7px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
-  /* margin-left: 10%; */
-  margin: 30px 0 60px 30px;
 }
-
-
-
 
 /* REGISTER PG MEDIA QUERIES */
 
@@ -365,7 +450,6 @@ form .form-children:last-child .field{
 
     .register-form-child {
         font-size: 30px;
-        /* outline: 1px solid green; */
         height: 100%;
         width: 100%;
         display: flex; 
@@ -375,7 +459,6 @@ form .form-children:last-child .field{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* flex-direction: column; */
     }
 
     .register-form-child .label {
@@ -387,7 +470,6 @@ form .form-children:last-child .field{
     }
 
     .register-submit-btn-container {
-    /* outline: 2px solid green; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -395,10 +477,9 @@ form .form-children:last-child .field{
     align-content: center;
 }
 .register-submit-btn-container .register-submit-btn {
-        /* outline: 1px solid red; */
         font-size: 1.3rem;
         color: rgba(0, 0, 0, .6);
-        width: 40%;
+        width: 50%;
         padding: 10px 20px;
         text-align: center;
         border-radius: 7px;
@@ -416,21 +497,6 @@ form .form-children:last-child .field{
         margin-top: 2rem;
     }
 
-    .register-form-child {
-        font-size: 30px;
-        /* outline: 1px solid green; */
-        height: 100%;
-        width: 100%;
-        display: flex; 
-        margin: 0 0 2px 0;
-        padding: 10px;
-        /* outline: 2px solid green; */
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        /* flex-direction: column; */
-    }
-
     .register-form-child .label {
         font-size: 1.3rem;
     }
@@ -441,16 +507,44 @@ form .form-children:last-child .field{
 
     .register-submit-btn-container .register-submit-btn {
         font-size: 1.1rem;
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 900px) {
     .register-submit-btn-container .register-submit-btn {
         font-size: 1rem;
-        width: 50%;
         padding: 15px 25px;
     }
 }
 
+@media screen and (max-width: 850px) {
+    .register-form-child .label {
+        width: 70%;
+        justify-content: center;
+    }
 
+}
 
+@media screen and (max-width: 768px) {
+    .register-form-child {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .register-form-child .field {
+        width: 100%;
+    }
+    .register-submit-btn-container .register-submit-btn {
+        font-size: 1rem;
+        text-align: center;
+        width: 70%;
+        /* padding: 15px 25px; */
+        padding: 15px 35px;
+    }
+}
