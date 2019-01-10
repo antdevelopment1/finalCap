@@ -20,6 +20,10 @@ function dashboardPage() {
         <div class="title-container">
             <h1 class="title">The Dashboard</h1>
         </div>
+        <div class="dashboad-btns">
+            <a href="./betaProto.html" class="btn-1 regbtn">REGISTER PRODUCT</a>
+            <a href="./registerProduct.html" class="btn-2 editbtn">EDIT PROFILE</a>
+        </div>
     </div>
 </body>
 </html>
