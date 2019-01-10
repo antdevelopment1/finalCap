@@ -183,7 +183,7 @@ form {
 
 form .form-children{
     font-size: 30px;
-    /* outline: 1px solid green; */
+    outline: 1px solid green;
     height: 100%;
     width: 100%;
     display: flex; 
@@ -200,11 +200,12 @@ input[type="text"], input[type="email"], input[type="tel"] {
     letter-spacing: 2px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
     margin-left: 10%;
+    outline: 1px solid red;
 }
 
 input[type="submit"] {
-    /* outline: 1px solid red; */
-    font-size: 25px;
+    outline: 1px solid red;
+    font-size: 1px;
     color: rgba(0, 0, 0, .6);
     width: 25%;
     padding: 10px 10px;

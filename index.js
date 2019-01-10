@@ -64,12 +64,15 @@ app.post('/login', (req, res) => {
 
 // Sign Up Page Get Request
 app.get('/signup', (req, res) => {
+    console.log(req.body);
     res.send(signUpPage());
 
 })
 
 // Sign Up Page Post Request
 app.post('/signup', (req, res) => {
+    console.log(req.body);
+    res.send(registerProductPage());
 
 })
 
