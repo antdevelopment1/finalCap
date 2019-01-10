@@ -145,14 +145,35 @@ app.listen(3000, () => {
     // =============================
 
     // Retrieve all products
+    // Product.getAllProducts()
+    //     .then(result => {
+    //         console.log(result)
+    //     })
 
     // Retrieve product by id
+    // Product.getProductById(2)
+    //     .then(result => {
+    //         console.log(result)
+    //     })
+
 
     // Retrieve product by serialNumber
+    // Product.getProductBySerialNumber('8282828920-2')
+    //     .then(result => {
+    //         console.log(result);
+    //     })
 
     // Retrieve phone number
+    // Product.getProductByPH('30303837636')
+    //     .then(result => {
+    //         console.log(result)
+    //     })
 
     // Retrieve user by product id
+    // Product.getProductByUserId(2)
+    //     .then(result => {
+    //         console.log(result)
+    //     })
     
     // =============================
     //      Update User Product
@@ -168,8 +189,16 @@ app.listen(3000, () => {
     // =============================
 
     // Delete product by id
+    // Product.deleteProductById(1)
+    //     .then(result => {
+    //         console.log(result)
+    //     })
 
     // Delete product by serial number
+    // Product.deleteProductBySerialNumber('9829992022')
+    // .then(result => {
+    //     console.log(result)
+    // })
 
 
 

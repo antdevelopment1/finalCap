@@ -46,7 +46,6 @@ class User {
             return userInstance;
         })
     }
-
     // Retrieve user email
     static getUserByEmail(email) {
         return db.one(`select * from users where email ilike '%$1:raw%'`, [email])
