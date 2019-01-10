@@ -51,17 +51,6 @@ app.get('/', (req, res) => {
     res.send(homepage())
 })
 
-// Login Page Get Request
-app.get('/login', (req, res) => {
-    res.send(loginPage());
-
-})
-
-// Login Page Post Request
-app.post('/login', (req, res) => {
-
-})
-
 // Sign Up Page Get Request
 app.get('/signup', (req, res) => {
     res.send(signUpPage());
@@ -70,6 +59,29 @@ app.get('/signup', (req, res) => {
 
 // Sign Up Page Post Request
 app.post('/signup', (req, res) => {
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email1;
+    const username = req.body.username;
+    const password = req.body.password;
+
+    User.createUser(firstname, lastname, email, username, password)
+        .then(newUser => {
+            res.redirect('/login');
+            console.log("User has been added");
+        });
+})
+
+// Login Page Get Request
+app.get('/login', (req, res) => {
+    console.log(req.body);
+    const username = req.body.username;
+    const password = req.body.password;
+    User.
+})
+
+// Login Page Post Request
+app.post('/login', (req, res) => {
 
 })
 

@@ -19,17 +19,17 @@ function signUpPage() {
                         <h1>Pseudo Secure Sign Up Form</h1> 
                         <h2>Please fill in the information below to join the PS Initiative.</h2>
                      </header>
-                     <form action="#">  
+                     <form action="/signup" method="POST">  
                        <div class="form-children">
-                         <label for="text1" class="label">First Name:</label>
+                         <label for="firstname" class="label">First Name:</label>
                          <div class="field">
-                           <input name="text1" id="text1"  type="text"  value="" placeholder="First Name" required>
+                           <input name="firstname" id="firstname"  type="text"  value="" placeholder="First Name" required>
                          </div>
                        </div>
                         <div class="form-children">
-                            <label for="text1" class="label">Last Name:</label>
+                            <label for="lastname" class="label">Last Name:</label>
                             <div class="field">
-                                <input name="text1" id="text1"  type="text"  value="" placeholder="Last Name" required>
+                                <input name="lastname" id="lastname"  type="text"  value="" placeholder="Last Name" required>
                             </div>
                         </div>
                        <div class="form-children">
@@ -39,23 +39,17 @@ function signUpPage() {
                          </div>
                        </div>
                        <div class="form-children">
-                            <label for="text1" class="label">Username:</label>
+                            <label for="username" class="label">Username:</label>
                             <div class="field">
-                                <input name="text1" id="text1"  type="text"  value="" placeholder=Username required>
+                                <input name="username" id="username"  type="text"  value="" placeholder=Username required>
                             </div>
                         </div>
                         <div class="form-children">
-                            <label for="text1" class="label">Password:</label>
+                            <label for="password" class="label">Password:</label>
                             <div class="field">
-                              <input name="text1" id="text1"  type="text"  value="" placeholder=Password required>
+                              <input name="password" id="password"  type="text"  value="" placeholder=Password required>
                             </div>
                         </div>
-                       <div class="form-children">
-                         <label for="tel1" class="label">Phone Number:</label>         
-                         <div class="field">
-                           <input name="tel1" id="tel1" type="tel" value="" placeholder="Phone Number" required>
-                         </div>
-                       </div>
                        <div class="form-children">
                          <div class="field">
                            <input id="saveForm" name="saveForm" type="submit" value="Sign Up">
