@@ -19,7 +19,7 @@ function signUpPage() {
                         <h1>Pseudo Secure Sign Up Form</h1> 
                         <h2>Please fill in the information below to join the PS Initiative.</h2>
                      </header>
-                     <form action="#">  
+                     <form action="/signup" method="POST">  
                        <div class="form-children">
                          <label for="text1" class="label">First Name:</label>
                          <div class="field">
@@ -62,7 +62,6 @@ function signUpPage() {
                          </div>
                        </div>
                      </form>
-        <script src="scripts/index.js"></script>
     </body>
     </html>`;
 }
