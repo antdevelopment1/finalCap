@@ -170,10 +170,10 @@ app.listen(3000, () => {
     //     })
 
     // Retrieve user by product id
-    Product.getProductByUserId(2)
-        .then(result => {
-            console.log(result)
-        })
+    // Product.getProductByUserId(2)
+    //     .then(result => {
+    //         console.log(result)
+    //     })
     
     // =============================
     //      Update User Product
@@ -189,8 +189,16 @@ app.listen(3000, () => {
     // =============================
 
     // Delete product by id
+    // Product.deleteProductById(1)
+    //     .then(result => {
+    //         console.log(result)
+    //     })
 
     // Delete product by serial number
+    // Product.deleteProductBySerialNumber('9829992022')
+    // .then(result => {
+    //     console.log(result)
+    // })
 
 
 
