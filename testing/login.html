@@ -19,29 +19,25 @@
                     <h1 class="registerh1">Pseudo Secure Login In Form</h1> 
                     <h2>Please fill in the information below to login to your account.</h2>
                  </header>
-                 <form action="#">  
-                      
-                   <div class="form-children register">
-                     <label for="text1" class="label ">Username:</label>
-                     <div class="field">
-                       <input name="text1" id="text1"  type="text"  value="" placeholder="Username" required>
-                     </div>
-                   </div>
-                    <div class="form-children">
-                        <label for="text1" class="label">Password:</label>
-                        <div class="field">
-                            <input name="text1" id="text1"  type="text"  value="" placeholder="Password" required>
-                        </div>
+                 <form action="#" class="register-product-form">  
+                  <div class="register-form-child">
+                    <label for="username" class="label">Username:</label>
+                    <div class="field">
+                      <input name="username" id="username"  type="text"  value="" placeholder="Username" class="register-input" required>
                     </div>
-                
-                   
-                   <div class="form-children register1">
-                     <div class="field">
-                       <input id="saveForm" name="saveForm" type="submit" value="SIGN IN">
-                     </div>
+                  </div>
+                   <div class="register-form-child">
+                       <label for="password" class="label">Password:</label>
+                       <div class="field">
+                           <input name="password" id="password"  type="text"  value="" placeholder="Password" class="register-input" required>
+                       </div>
                    </div>
-                
-                 </form>
+                  <div class="register-form-child register-submit">
+                    <div class="register-submit-btn-container">
+                      <input id="reg-submit" name="saveForm" type="submit" value="Login" class="register-submit-btn">
+                    </div>
+                  </div>
+                </form>
     <script src="scripts/index.js"></script>
 </body>
 </html>
