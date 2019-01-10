@@ -139,6 +139,10 @@ app.listen(3000, () => {
     // ================================
 
     // Create/Register new product
+    // Product.registerProduct('293993333', '2384753847')
+    //     .then(result => {
+    //         console.log(result)
+    //     })
 
     // =============================
     //     Retrieve User Product
@@ -180,8 +184,22 @@ app.listen(3000, () => {
     // =============================
 
     // Update serial number
+    // Product.getProductBySerialNumber('8282828920-2')
+    //     .then(result => {
+    //         result.updateProductSerialNumber('333444555')
+    //             .then(updated => {
+    //                 console.log(updated)
+    //             })
+    //     })
 
     // Update phone number
+    // Product.getProductByPH('30303837636')
+    //     .then(result => {
+    //         result.updateProductPhoneNumber('8389493028')
+    //             .then(result => {
+    //                 console.log(result)
+    //             })
+    //     })
 
 
     // =============================

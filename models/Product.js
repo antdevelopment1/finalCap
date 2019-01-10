@@ -1,4 +1,5 @@
 const db = require('./db');
+const User = require('./User');
 
 class Product {
     
@@ -17,7 +18,16 @@ class Product {
 
     // Create/Register new product
 
-    static registerProduct(serialNumber, phoneNumber, user_id) {
+    static registerProduct(serial_number, phone_number, user_id) {
+
+        return db.one(
+        `insert into products (serial_number, phone_number, user_id) 
+        values($1, $2, $3) returning id, serial_number, phone_number, user_id`, 
+        [serial_number, phone_number, this.user_id])
+            .then(result => {
+                const newInstance = new Product (result.id, result.serial_number, result.phone_number, result.user_id);
+                return newInstance;
+            })
 
     }
 
@@ -73,12 +83,29 @@ class Product {
 
     // Update serial number
     updateProductSerialNumber(serialNumber) {
+        return db.result(`update products set serial_number=$2 where id=$1`, [this.id, serialNumber])
+            .then(result => {
+                if (result.rowCount === 1) {
+                    console.log('Your serial number has been updated');
+                } else {
+                    console.log("Your serial number has not been updated");
+                }
+                return result.rowCount;
+            })
 
     }
 
     // Update phone number
     updateProductPhoneNumber(phoneNumber) {
-
+        return db.result(`update products set phone_number=$2 where id=$1`, [this.id, phoneNumber])
+        .then(result => {
+            if (result.rowCount === 1) {
+                console.log('Your phone number has been updated');
+            } else {
+                console.log("Your phone number has not been updated");
+            }
+            return result.rowCount;
+        })
     }
 
 
