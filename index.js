@@ -7,18 +7,28 @@ const bodyParser = require('body-parser');
 const User = require('./models/User');
 const Product = require('./models/Product');
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/', (req, res) => {
-    console.log(req.body);
-    res.send(
-        {
-            wifiPass: "9020mndwmodw",
-            wifinet: "9393jhdjdd"
-        }
-    );
-})
+
+// ================================
+//       Views Module Imports
+// ================================
+const homepage = require('./views/home');
+const loginPage = require('./views/login');
+const signUpPage = require('./views/signup');
+const registerProductPage = require('./views/registerProduct');
+
+// app.post('/', (req, res) => {
+//     console.log(req.body);
+//     res.send(
+//         {
+//             wifiPass: "9020mndwmodw",
+//             wifinet: "9393jhdjdd"
+//         }
+//     );
+// })
 
 app.post('/intruder', (req, res) => {
     // console.log(req.body);
@@ -32,11 +42,72 @@ app.post('/intruder', (req, res) => {
     // .done();
 })
 
+// ================================
+//       Routes GET / POST
+// ================================
+
+// Home Page 
+app.get('/', (req, res) => {
+    res.send(homepage())
+})
+
+// Login Page Get Request
+app.get('/login', (req, res) => {
+    res.send(loginPage());
+
+})
+
+// Login Page Post Request
+app.post('/login', (req, res) => {
+
+})
+
+// Sign Up Page Get Request
+app.get('/signup', (req, res) => {
+    res.send(signUpPage());
+
+})
+
+// Sign Up Page Post Request
+app.post('/signup', (req, res) => {
+
+})
+
+// Register Product Page Get Request
+app.get('/registerProduct', (req, res) => {
+    res.send(registerProductPage());
+
+})
+
+// Register Product Page Post Request
+app.post('/registerProduct', (req, res) => {
+
+})
+
+// Edit Profile Page Dashbaord
+app.get('/dashboard', (req, res) => {
+
+})
+
+// Logout Post Request
+app.post('/logout', (req, res) => {
+
+})
+
+
+// ================================
+//       Routes GET / POST
+//   Once Inside User Dashboard
+// ================================
+
+
 app.listen(3000, () => {
     console.log('Listening on port 3000');
 })
 
-
+// ========================================
+//   Controller Calls to Models Functions
+// ========================================
 
     // =====================
     //      Create User
