@@ -12,6 +12,10 @@ class Product {
         this.user_id = user_id;
     }
 
+    serialNumberDoesMatch(serialNumber) {
+        return this.serialNumber === serialNumber;
+    }
+
     // =====================
     //        Create
     // =====================
@@ -23,7 +27,7 @@ class Product {
         return db.one(
         `insert into products (serial_number, phone_number, user_id) 
         values($1, $2, $3) returning id, serial_number, phone_number, user_id`, 
-        [serial_number, phone_number, this.user_id])
+        [serial_number, phone_number, user_id])
             .then(result => {
                 const newInstance = new Product (result.id, result.serial_number, result.phone_number, result.user_id);
                 return newInstance;

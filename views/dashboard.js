@@ -1,4 +1,4 @@
-function dashboardPage() {
+function dashboardPage(content) {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +21,8 @@ function dashboardPage() {
             <h1 class="title">The Dashboard</h1>
         </div>
         <div class="dashboad-btns">
-            <a href="./betaProto.html" class="btn-1 regbtn">REGISTER PRODUCT</a>
-            <a href="./registerProduct.html" class="btn-2 editbtn">EDIT PROFILE</a>
+            <a href='/registerProduct' class="btn-1 regbtn">REGISTER PRODUCT</a>
+            <a href="/editProfile" class="btn-2 editbtn">VIEW ACCOUNT</a>
         </div>
     </div>
 </body>
