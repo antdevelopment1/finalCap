@@ -128,16 +128,18 @@ app.post('/registerProduct', (req, res) => {
                 Product.getProductBySerialNumber(serialNum)
                     .catch(err => {
                         console.log('There was an error retriving that serial number');
-                        console.log(serialNum);
                         res.redirect('/registerProduct');
                     })
                     .then(result => {
-                        console.log(result)
-                        Product.registerProduct(serialNum, phoneNumber, user_id)
-                        .then(result => {
-                            console.log(result);
-                        })
-                        res.redirect('/editProfile');
+                        if (result ===  undefined) {
+                            res.redirect('/registerProduct');
+                        } else {
+                            Product.registerProduct(serialNum, phoneNumber, user_id)
+                            .then(result => {
+                                console.log(result);
+                            })
+                            res.redirect('/editProfile');
+                        }
                     })
             })
     
