@@ -14,7 +14,6 @@ function buildProcessPage() {
         <nav class="nav-container">
             <div class="nav">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html">LOGOUT</a></li>
             </div>
         </nav>
         <div class="building-title-container">
