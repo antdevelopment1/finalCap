@@ -20,6 +20,7 @@ const loginPage = require('./views/login');
 const signUpPage = require('./views/signup');
 const dashboardPage = require('./views/dashboard');
 const registerProductPage = require('./views/registerProduct');
+const editProfilePage = require('./views/editProfile');
 
 // app.post('/', (req, res) => {
 //     console.log(req.body);
@@ -90,32 +91,68 @@ app.post('/login', (req, res) => {
                 res.redirect('/login');
             })
             .then(result => {
-                console.log(result);
                 if (result.passwordDoesMatch(thePassword)) {
-                    res.redirect('/dashboard');
+                    res.redirect(`/dashboard`);
                 } else {
                     res.redirect('/login');
                 }
             })
-    
+})
 
+// Welcome Dashbaord Page Once Logged In
+app.get(`/dashboard`, (req, res) => {
+    res.send(dashboardPage());
+})
+
+app.get(`/dashboard`, (req, res) => {
+    res.send(dashboardPage());
 })
 
 // Register Product Page Get Request
 app.get('/registerProduct', (req, res) => {
     res.send(registerProductPage());
-
 })
 
 // Register Product Page Post Request
 app.post('/registerProduct', (req, res) => {
-
+    const username = req.body.username;
+    const serialNum = req.body.serialnum;
+    const phoneNumber = req.body.tel1;
+    User.getUserByUsername(username)
+            .catch(err => {
+                console.log('There was an error retriving you info');
+                res.redirect('/login');
+            })
+            .then(result => {
+                const user_id = result.id;
+                Product.getProductBySerialNumber(serialNum)
+                    .catch(err => {
+                        console.log('There was an error retriving that serial number');
+                        res.redirect('/registerProduct');
+                    })
+                    .then(result => {
+                        if (result ===  undefined) {
+                            res.redirect('/registerProduct');
+                        } else {
+                            Product.registerProduct(serialNum, phoneNumber, user_id)
+                            .then(result => {
+                                console.log(result);
+                            })
+                            res.redirect('/editProfile');
+                        }
+                    })
+            })
+    
 })
 
-// Edit Profile Page Dashbaord
-app.get('/dashboard', (req, res) => {
-    res.send(dashboardPage());
+app.get('/editProfile', (req, res) => {
+    res.send(editProfilePage())
 })
+
+// // Get Users Info / View Account
+// app.get(`/dashboard/:id(\\d+)/`, (req, res) => {
+//     res.send(dashboardPage());
+// })
 
 // Logout Post Request
 app.post('/logout', (req, res) => {

@@ -13,14 +13,20 @@ function registerPage() {
     <div class="register-page">
             <nav class="nav-container">
                     <div class="nav register-nav">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="/">HOME</a></li>
                     </div>
                 </nav>
             <div class="register-form-title">
                     <h1 class="register-title">Pseudo Secure Register Product Form</h1> 
                     <h2>Please fill in the information below to register your product.</h2>
             </div>
-                 <form action="#" class="register-product-form">  
+                 <form action="/registerProduct" method="post" class="register-product-form">  
+                 <div class="register-form-child">
+                     <label for="username" class="label ">Username:</label>
+                     <div class="field">
+                       <input name="username" id="serialnum"  type="text"  value="" placeholder="Username" class="register-input" required>
+                     </div>
+                   </div>
                    <div class="register-form-child">
                      <label for="serialnum" class="label ">Serial Number:</label>
                      <div class="field">
