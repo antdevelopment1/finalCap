@@ -125,11 +125,20 @@ app.post('/registerProduct', (req, res) => {
             })
             .then(result => {
                 const user_id = result.id;
-                Product.registerProduct(serialNum, phoneNumber, user_id)
-                .then(result => {
-                    console.log(result);
-                })
-                res.redirect('/editProfile');
+                Product.getProductBySerialNumber(serialNum)
+                    .catch(err => {
+                        console.log('There was an error retriving that serial number');
+                        console.log(serialNum);
+                        res.redirect('/registerProduct');
+                    })
+                    .then(result => {
+                        console.log(result)
+                        Product.registerProduct(serialNum, phoneNumber, user_id)
+                        .then(result => {
+                            console.log(result);
+                        })
+                        res.redirect('/editProfile');
+                    })
             })
     
 })
