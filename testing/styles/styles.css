@@ -99,7 +99,7 @@ li {
 
 .title {
     width: 100%;
-    /* padding: 0 1rem; */
+    padding: 0 1rem;
     font-size: 6.5rem;
     color: white;
     line-height: 7rem;
@@ -128,19 +128,20 @@ li {
     margin: 0 auto 10rem auto;
     padding: 2rem 1rem;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
     /* outline: 1px solid white; */
 }
 
 .btn-1,
 .btn-2 {
-    padding: .7rem 1.5rem;
+    padding: .7rem 2.5rem;
     font-size: 1.7rem;
+    width: 100%;
     /* border: 3px solid  white; */
     border: 3px solid rgba(255, 255, 255, .2);
     border-radius: 10px;
     text-decoration: none;
+    text-align: center;
     margin: 1rem 2.5rem;
     box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1);
@@ -159,11 +160,11 @@ li {
 
 @media screen and (max-width: 1300px) {
     .title-container {
-        padding: 0 0 1rem 0;
+        padding: 6rem 0 1rem 0;
         /* outline: 1px solid white; */
     }
 
-    .title {
+    .title{
         font-size: 6rem;
     }
 
@@ -206,7 +207,7 @@ li {
     
     .btn-1,
     .btn-2 {
-        padding: .7rem 1.5rem;
+        /* padding: .7rem 1.5rem; */
         font-size: 1.5rem;
     }
 }
@@ -239,9 +240,16 @@ li {
     .button-container {
         /* padding-top: 1rem; */
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
     }
 
-    .btn-1, .btn-2 {
+    .btn-1, 
+    .btn-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
     }
 }
@@ -265,7 +273,6 @@ h2 {
 h1, h2 {
     color: rgba(0, 0, 0, .8);
     text-align: center;
-    /* outline: 1px solid green; */
     padding: 5px;
 }
 
@@ -273,66 +280,6 @@ form {
     font-size: 1.4rem; 
     color: #222;
 }
-
-form .form-children{
-    font-size: 30px;
-    /* outline: 1px solid green; */
-    height: 100%;
-    width: 100%;
-    display: flex; 
-    margin: 0 0 6px 0;
-    padding: 10px;
-}
-
-input[type="text"], input[type="email"], input[type="tel"] {
-    font-size: 1.3rem;
-    width: 80%;
-    padding: 16px 20px;
-    text-align: center;
-    border-radius: 7px;
-    letter-spacing: 2px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
-    /* margin-left: 10%; */
-}
-
-input[type="submit"] {
-    /* outline: 1px solid red; */
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, .6);
-    /* color: blue; */
-    width: 25%;
-    padding: 10px;
-    text-align: center;
-    border-radius: 7px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
-    /* margin-left: 10%;
-    margin: 30px 0 60px 30px; */
-}
-
-form .form-children .label{
-    width: 900px;
-    /* outline: 3px solid red; */
-    flex: 1; 
-    text-align: right; 
-    margin: 0 5px 0 5px;
-    padding: 10px;
-}
-form .form-children .field{
-    /* width: 50px; */
-    width: 0px;
-    /* outline: 3px solid green; */
-  flex: 3;
-}
-form .form-children:last-child{
-  display: flex;
-  justify-content: flex-end;
-}
-form .form-children:last-child .field{
-    text-align: center;
-    /* outline: 1px solid red; */
-  /* max-width: 100%; */
-}
-
 
 /* ================================== */
           /* Register Page */
@@ -448,6 +395,7 @@ form .form-children:last-child .field{
   text-align: center;
   border-radius: 7px;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
+  padding: 10px;
 }
 
 /* REGISTER PG MEDIA QUERIES */
@@ -577,7 +525,6 @@ form .form-children:last-child .field{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 }
 
@@ -587,6 +534,7 @@ form .form-children:last-child .field{
     .signup-form-child .field, {
         width: 100%;
     }
+
     .register-submit-btn-container .register-submit-btn,
     .login-submit-btn-container .login-submit-btn,
     .signup-submit-btn-container .signup-submit-btn {
@@ -595,5 +543,67 @@ form .form-children:last-child .field{
         width: 70%;
         /* padding: 15px 25px; */
         padding: 15px 35px;
+    }
+}
+
+
+/* ====================== */
+/* DASHBOARD */
+/* ====================== */
+.dashboard-title-container {
+    /* outline: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.dashboard-btn-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0 16rem 0;
+    /* outline: 1px solid red; */
+}
+
+.reg-btn-1,
+.reg-btn-2 {
+    padding: .7rem .5rem;
+    font-size: 1.7rem;
+    /* outline: 2px solid purple; */
+    /* border: 3px solid  white; */
+    border: 3px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 1rem 2.5rem;
+    box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    text-align: center;
+    background-color: none;
+    transition: box-shadow .2s ease-in-out .1s, transform .2s ease-in-out .1s;
+}
+
+.reg-btn-1:hover,
+.reg-btn-2:hover {
+    transform: scale(1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+
+@media screen and (max-width: 900px) {
+    .dashboard-btn-container {
+        padding: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .dashboard-btn-container {
+        width: 100%;
+        flex-direction: column;
+        /* outline: 1px solid white; */
+    }
+    .reg-btn-1,
+    .reg-btn-2 {
+        width: 70%;
     }
 }
