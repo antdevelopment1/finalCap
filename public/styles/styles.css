@@ -88,7 +88,7 @@ li {
 .title-container {
     height: 100%;
     width: 100%;
-    padding: 12rem 0 0 0;
+    padding: 11rem 0 0 0;
     /* outline: 1px solid white; */
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@ li {
 .title {
     width: 100%;
     padding: 0 1rem;
-    font-size: 6.5rem;
+    font-size: 6rem;
     color: white;
     line-height: 7rem;
     letter-spacing: 1rem;
@@ -126,7 +126,7 @@ li {
     height: 100%;
     width: 70%;
     margin: 0 auto 10rem auto;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     display: flex;
     justify-content: center;
     /* outline: 1px solid white; */
@@ -138,12 +138,12 @@ li {
     font-size: 1.7rem;
     width: 100%;
     /* border: 3px solid  white; */
-    border: 3px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, .15);
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
     margin: 1rem 2.5rem;
-    box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 7px  7px 4px rgba(0, 0, 0, 0.5);
     transform: scale(1);
     background-color: none;
     transition: box-shadow .2s ease-in-out .1s, transform .2s ease-in-out .1s;
@@ -152,7 +152,8 @@ li {
 .btn-1:hover,
 .btn-2:hover {
     transform: scale(1);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
+
 }
 
 
@@ -165,7 +166,8 @@ li {
     }
 
     .title{
-        font-size: 6rem;
+        font-size: 5rem;
+        letter-spacing: 8px;
     }
 
     .title-p {
@@ -176,33 +178,67 @@ li {
     .button-container {
         /* outline: 1px solid white; */
         padding: 0;
+        margin-bottom: 9rem;
+    }
+
+    .btn-1, .btn-2 {
+        margin-top: 3rem;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .title {
-        font-size: 5.8rem;
+        font-size: 4.5rem;
     }
 
     .title-p {
         font-size: 1.9rem;
     }
+
+    .btn-1, .btn-2 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     .title {
-        font-size: 5.6rem;
+        font-size: 4rem;
+        letter-spacing: 6px;
+        line-height: 6rem;
     }
 
     .title-p {
         font-size: 1.7rem;
     }
+
+    .btn-1, .btn-2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .btn-1,
+    .btn-2 {
+        /* padding: .7rem 1.5rem; */
+        font-size: 1.5rem;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 
 @media screen and (max-width: 850px) {
 
+    .title {
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    .title-p {
+        font-size: 1.4rem;
+    }
+
     .button-container {
-        width: 100%;
+        width: 80%;
     }
     
     .btn-1,
@@ -213,11 +249,21 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+    .title-container {
+        padding-top: 6rem;
+    }
     .title {
-        font-size: 4.5rem;
+        font-size: 3rem;
+        line-height: 4rem;
     }
     .title-p {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .button-container {
+        margin-top: 2rem;
+        margin-bottom: 13rem;
     }
 
 }
@@ -230,11 +276,21 @@ li {
         /* padding-right: 0rem; */
         /* outline: 2px solid green; */
     }
+
+    .title-container {
+        padding-top: 3rem;
+    }
     
     .title {
         width: 100%;
-        line-height: 5rem;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        font-weight: 600;
+        /* font-size: 3.5rem; */
+    }
+
+    .title-p {
+        font-size: .9rem;
     }
 
     .button-container {
@@ -242,6 +298,7 @@ li {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 8rem;
         width: 70%;
     }
 
@@ -251,6 +308,28 @@ li {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .btn-2 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .title {
+        width: 100%;
+        font-size: 2rem;
+        line-height: 2.6rem;
+        margin-bottom: .5rem;
+        /* font-size: 3.5rem; */
+    }
+
+    .title-p {
+        font-size: .9rem;
+    }
+
+    .btn-1 {
+        margin-top: 40px;
     }
 }
 
