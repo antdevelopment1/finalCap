@@ -9,16 +9,16 @@ function signUpPage() {
         <title>Affordable Security Alert</title>
     </head>
     <body>
-        <div class="landing-page">
+        <div class="signup-page">
                 <nav class="nav-container">
                         <div class="nav">
                                 <li><a href="/">HOME</a></li>
                         </div>
                     </nav>
-                <header>
-                  <h1>Pseudo Secure Sign Up Form</h1> 
+              <div class="signup-form-title">
+                  <h1 class="signup-title">Pseudo Secure Sign Up Form</h1> 
                   <h2>Please fill in the information below to join the PS Initiative.</h2>
-                </header>
+               </div>
                      <form action="/signup"  method="post" class="signup-form">  
                       <div class="signup-form-child">
                         <label for="firstname" class="label ">First Name:</label>

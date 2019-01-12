@@ -366,14 +366,16 @@ form {
 /* ================================== */
 
 .register-page,
-.login-page {
+.login-page,
+.signup-page {
     height: 100%;
     width: 100%;
 }
 
 .register-form-title,
-.login-form-title {
-    /* outline: 1px solid red; */
+.login-form-title,
+.signup-form-title {
+    outline: 1px solid red;
     height: 100%;
     width: 100%;
     display: flex;
@@ -383,8 +385,10 @@ form {
 }
 
 .register-title,
-.login-title {
+.login-title,
+.signup-title {
     margin-top: 8rem;
+    outline: 3px solid yellow;
 }
 
 .register-product-form,
@@ -511,7 +515,7 @@ form {
         width: 100%;
         display: flex; 
         margin: 0 0 2px 0;
-        padding: 10px;
+        padding: 20px;
         /* outline: 2px solid green; */
         display: flex;
         align-items: center;
@@ -521,7 +525,7 @@ form {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label{
-        font-size: 1.6rem;
+        font-size: 1.9rem;
     }
 
     .register-input,
@@ -565,14 +569,14 @@ form {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
+        /* outline: 2px solid red; */
     }
 
     .register-form-child .field .register-input,
     .login-form-child .field .login-input,
     .signup-form-child .field .signup-input {
-        font-size: 1rem;
-        /* outline: 2px solid red; */
+        font-size: 1.3rem;
     }
 
     .register-submit-btn-container .register-submit-btn,
@@ -590,13 +594,35 @@ form {
         font-size: 1rem;
         padding: 15px 25px;
     }
+
+    .register-input,
+    .login-input,
+    .signup-input {
+        padding: none;
+    }
+
+.register-form-title,
+.login-form-title,
+.signup-form-title {
+    outline: 1px solid red;
+   font-size: 1rem;
+}
+
+.register-title,
+.login-title,
+.signup-title {
+    margin-top: 8rem;
+    outline: 3px solid yellow;
+}
+
 }
 
 @media screen and (max-width: 850px) {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label {
-        width: 70%;
+        /* outline: 1px solid red; */
+        width: 80%;
         justify-content: center;
     }
 }
@@ -609,6 +635,16 @@ form {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 8px;
+        /* outline: 1px solid yellow; */
+    }
+
+    .register-form-child .label,
+    .login-form-child .label,
+    .signup-form-child .label {
+      margin-bottom: 10px;
+      font-size: 1.7rem;
+        /* outline: 2px solid red; */
     }
 }
 
