@@ -691,30 +691,75 @@ form {
 /* PROTOTYPE PAGE */
 /* ====================== */
 
-.main-img-container {
+.building-title-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    outline: 1px solid white;
+    justify-content: center;
+    align-items: center;
+}
+
+.building-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    outline: 1px solid red;
+    margin-top: 0;
+}
+
+.main-content {
+    outline: 2px solid green;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
+
 }
-.image-container {
+
+.lg-p {
+    outline: 1px solid orange;
     height: 100%;
     width: 100%;
     margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    outline: 1px solid green;
+    text-align: justify;
 }
 
-.image {
-    outline: 1px solid white;
-    margin: 1rem;
-    padding: 1rem;
+.lg-p p {
+    outline: 1px solid yellow;
+    height: 100%;
+    width: 60%;
+    padding: 1rem 2rem;
+}
+
+.content {
+    outline: 2px solid purple;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.content2 {
+    flex-direction: row-reverse;
+}
+
+.img-container {
+    outline: 1px solid yellow;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img {
@@ -722,4 +767,18 @@ form {
     min-height: 150px;
     max-width: 150px;
     min-width: 150px;
+}
+
+.p-container {
+    height: 100%;
+    width: 50%;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid yellowgreen;
+}
+
+.p-container p {
+    width: 80%;
 }
