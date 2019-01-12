@@ -514,7 +514,7 @@ form {
         display: flex; 
         margin: 0 0 2px 0;
         padding: 20px 0;
-        /* outline: 2px solid green; */
+        outline: 2px solid green;
         display: flex;
         align-items: center;
         justify-content: space-between;
