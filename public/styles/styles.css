@@ -375,7 +375,7 @@ form {
 .register-form-title,
 .login-form-title,
 .signup-form-title {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -388,7 +388,7 @@ form {
 .login-title,
 .signup-title {
     margin-top: 8rem;
-    outline: 3px solid yellow;
+    /* outline: 3px solid yellow; */
 }
 
 .register-product-form,
@@ -434,7 +434,6 @@ form {
 .login-form-child .field,
 .signup-form-child .field{
     display: flex;
-    /* outline: 1px solid blue; */
     width: 100%;
     justify-content: center;
 }
@@ -442,7 +441,6 @@ form {
 .register-input,
 .login-input,
 .signup-input {
-    /* outline: 1px solid green; */
     font-size: 1.6rem;
     width: 100%;
     padding: 16px 20px;
@@ -515,7 +513,7 @@ form {
         width: 100%;
         display: flex; 
         margin: 0 0 2px 0;
-        padding: 20px;
+        padding: 20px 0;
         /* outline: 2px solid green; */
         display: flex;
         align-items: center;
@@ -525,7 +523,7 @@ form {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label{
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
 
     .register-input,
@@ -569,7 +567,8 @@ form {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        justify-content: flex-start;
         /* outline: 2px solid red; */
     }
 
@@ -601,19 +600,28 @@ form {
         padding: none;
     }
 
-.register-form-title,
-.login-form-title,
-.signup-form-title {
-    outline: 1px solid red;
-   font-size: 1rem;
-}
 
-.register-title,
-.login-title,
-.signup-title {
-    margin-top: 8rem;
-    outline: 3px solid yellow;
-}
+    .register-title,
+    .login-title,
+    .signup-title {
+        margin-top: 8rem;
+        /* outline: 3px solid yellow; */
+        font-size: 2.3rem;
+    }
+
+    .register-form-title h2,
+    .login-form-title h2,
+    .signup-form-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .register-form-child .label,
+    .login-form-child .label,
+    .signup-form-child .label {
+        font-size: 1.5rem;
+        justify-content: flex-start;
+        /* outline: 2px solid red; */
+    }
 
 }
 
@@ -623,8 +631,21 @@ form {
     .signup-form-child .label {
         /* outline: 1px solid red; */
         width: 80%;
-        justify-content: center;
     }
+
+    .register-title,
+    .login-title,
+    .signup-title {
+        /* outline: 3px solid yellow; */
+        font-size: 2.1rem;
+    }
+
+    .register-form-title h2,
+    .login-form-title h2,
+    .signup-form-title h2 {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -635,7 +656,7 @@ form {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 8px;
+        padding: 0px;
         /* outline: 1px solid yellow; */
     }
 
@@ -644,6 +665,7 @@ form {
     .signup-form-child .label {
       margin-bottom: 10px;
       font-size: 1.7rem;
+      justify-content: center;
         /* outline: 2px solid red; */
     }
 }
@@ -663,6 +685,38 @@ form {
         width: 70%;
         /* padding: 15px 25px; */
         padding: 15px 35px;
+    }
+
+    
+
+    .register-title,
+    .login-title,
+    .signup-title {
+        /* outline: 3px solid yellow; */
+        font-size: 1.9rem;
+    }
+
+    .register-form-title h2,
+    .login-form-title h2,
+    .signup-form-title h2 {
+        font-size: 1.1rem;
+    }   
+
+    @media screen and (max-width: 400px) {
+        .register-title,
+        .login-title,
+        .signup-title {
+            /* outline: 3px solid yellow; */
+            font-size: 1.7rem;
+            padding: 5px;
+        }
+
+        .register-form-title h2,
+        .login-form-title h2,
+        .signup-form-title h2 {
+            font-size: 1rem;
+            padding: 5px;
+        }   
     }
 }
 
@@ -732,30 +786,79 @@ form {
 /* PROTOTYPE PAGE */
 /* ====================== */
 
-.main-img-container {
+/* ====================== */
+/* PROTOTYPE PAGE */
+/* ====================== */
+
+.building-title-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    outline: 1px solid white;
+    justify-content: center;
+    align-items: center;
+}
+
+.building-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    outline: 1px solid red;
+    margin-top: 0;
+}
+
+.main-content {
+    outline: 2px solid green;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
+
 }
-.image-container {
+
+.lg-p {
+    outline: 1px solid orange;
     height: 100%;
     width: 100%;
     margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    outline: 1px solid green;
+    text-align: justify;
 }
 
-.image {
-    outline: 1px solid white;
-    margin: 1rem;
-    padding: 1rem;
+.lg-p p {
+    outline: 1px solid yellow;
+    height: 100%;
+    width: 60%;
+    padding: 1rem 2rem;
+}
+
+.content {
+    outline: 2px solid purple;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.content2 {
+    flex-direction: row-reverse;
+}
+
+.img-container {
+    outline: 1px solid yellow;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img {
@@ -763,4 +866,18 @@ form {
     min-height: 150px;
     max-width: 150px;
     min-width: 150px;
+}
+
+.p-container {
+    height: 100%;
+    width: 50%;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid yellowgreen;
+}
+
+.p-container p {
+    width: 80%;
 }

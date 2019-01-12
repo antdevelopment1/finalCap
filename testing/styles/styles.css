@@ -356,6 +356,7 @@ h1, h2 {
 }
 
 form { 
+    /* outline: 1px solid red; */
     font-size: 1.4rem; 
     color: #222;
 }
@@ -365,13 +366,15 @@ form {
 /* ================================== */
 
 .register-page,
-.login-page {
+.login-page,
+.signup-page {
     height: 100%;
     width: 100%;
 }
 
 .register-form-title,
-.login-form-title {
+.login-form-title,
+.signup-form-title {
     /* outline: 1px solid red; */
     height: 100%;
     width: 100%;
@@ -382,8 +385,10 @@ form {
 }
 
 .register-title,
-.login-title {
+.login-title,
+.signup-title {
     margin-top: 8rem;
+    /* outline: 3px solid yellow; */
 }
 
 .register-product-form,
@@ -391,7 +396,7 @@ form {
 .signup-form {
     height: 100%;
     width: 60%; 
-    margin: 5rem auto 12rem auto;
+    margin: 2rem auto 12rem auto;
     /* outline: 1px solid yellow; */
     display: flex;
     flex-direction: column;
@@ -408,7 +413,7 @@ form {
     width: 100%;
     display: flex; 
     /* margin: 0 0 6px 0; */
-    padding: 10px;
+    padding: 20px 10px;
     /* outline: 2px solid green; */
     display: flex;
     justify-content: space-between;
@@ -421,6 +426,7 @@ form {
     /* outline: 1px solid purple; */
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50%;
 }
 
@@ -428,7 +434,6 @@ form {
 .login-form-child .field,
 .signup-form-child .field{
     display: flex;
-    /* outline: 1px solid blue; */
     width: 100%;
     justify-content: center;
 }
@@ -436,7 +441,6 @@ form {
 .register-input,
 .login-input,
 .signup-input {
-    /* outline: 1px solid green; */
     font-size: 1.6rem;
     width: 100%;
     padding: 16px 20px;
@@ -458,6 +462,7 @@ form {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -476,6 +481,8 @@ form {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, .4);
   padding: 10px;
 }
+
+
 
 /* REGISTER PG MEDIA QUERIES */
 
@@ -506,7 +513,7 @@ form {
         width: 100%;
         display: flex; 
         margin: 0 0 2px 0;
-        padding: 10px;
+        padding: 20px 0;
         /* outline: 2px solid green; */
         display: flex;
         align-items: center;
@@ -516,7 +523,7 @@ form {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .register-input,
@@ -560,14 +567,15 @@ form {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+        justify-content: flex-start;
+        /* outline: 2px solid red; */
     }
 
     .register-form-child .field .register-input,
     .login-form-child .field .login-input,
     .signup-form-child .field .signup-input {
-        font-size: 1rem;
-        /* outline: 2px solid red; */
+        font-size: 1.3rem;
     }
 
     .register-submit-btn-container .register-submit-btn,
@@ -585,15 +593,59 @@ form {
         font-size: 1rem;
         padding: 15px 25px;
     }
+
+    .register-input,
+    .login-input,
+    .signup-input {
+        padding: none;
+    }
+
+
+    .register-title,
+    .login-title,
+    .signup-title {
+        margin-top: 8rem;
+        /* outline: 3px solid yellow; */
+        font-size: 2.3rem;
+    }
+
+    .register-form-title h2,
+    .login-form-title h2,
+    .signup-form-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .register-form-child .label,
+    .login-form-child .label,
+    .signup-form-child .label {
+        font-size: 1.5rem;
+        justify-content: flex-start;
+        /* outline: 2px solid red; */
+    }
+
 }
 
 @media screen and (max-width: 850px) {
     .register-form-child .label,
     .login-form-child .label,
     .signup-form-child .label {
-        width: 70%;
-        justify-content: center;
+        /* outline: 1px solid red; */
+        width: 80%;
     }
+
+    .register-title,
+    .login-title,
+    .signup-title {
+        /* outline: 3px solid yellow; */
+        font-size: 2.1rem;
+    }
+
+    .register-form-title h2,
+    .login-form-title h2,
+    .signup-form-title h2 {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -604,6 +656,17 @@ form {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0px;
+        /* outline: 1px solid yellow; */
+    }
+
+    .register-form-child .label,
+    .login-form-child .label,
+    .signup-form-child .label {
+      margin-bottom: 10px;
+      font-size: 1.7rem;
+      justify-content: center;
+        /* outline: 2px solid red; */
     }
 }
 
@@ -622,6 +685,38 @@ form {
         width: 70%;
         /* padding: 15px 25px; */
         padding: 15px 35px;
+    }
+
+    
+
+    .register-title,
+    .login-title,
+    .signup-title {
+        /* outline: 3px solid yellow; */
+        font-size: 1.9rem;
+    }
+
+    .register-form-title h2,
+    .login-form-title h2,
+    .signup-form-title h2 {
+        font-size: 1.1rem;
+    }   
+
+    @media screen and (max-width: 400px) {
+        .register-title,
+        .login-title,
+        .signup-title {
+            /* outline: 3px solid yellow; */
+            font-size: 1.7rem;
+            padding: 5px;
+        }
+
+        .register-form-title h2,
+        .login-form-title h2,
+        .signup-form-title h2 {
+            font-size: 1rem;
+            padding: 5px;
+        }   
     }
 }
 
@@ -686,6 +781,7 @@ form {
         width: 70%;
     }
 }
+
 
 /* ====================== */
 /* PROTOTYPE PAGE */
