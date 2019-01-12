@@ -133,7 +133,8 @@ li {
 }
 
 .btn-1,
-.btn-2 {
+.btn-2,
+.edit-btn {
     padding: .7rem 2.5rem;
     font-size: 1.7rem;
     width: 100%;
@@ -150,7 +151,8 @@ li {
 }
 
 .btn-1:hover,
-.btn-2:hover {
+.btn-2:hover,
+.edit-btn:hover {
     transform: scale(1);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 
@@ -877,4 +879,52 @@ form {
 
 .p-container p {
     width: 80%;
+}
+
+
+/* ================= */
+/* edit profile  */
+/* ================= */
+
+.edit-title-container {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 0;
+    outline: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-title {
+    height: 100%;
+    width: 50%;
+    padding: 1rem;
+    outline: 1px solid blue;
+    margin-top: 0;
+}
+
+.main-edit-btn-container {
+    outline: 1px solid white;
+    height: 100%;
+    width: 100%;
+    margin: 8rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button-container {
+    height: 100%;
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    outline: 1px solid green;
+}
+
+.edit-btn {
+    
 }
