@@ -21,6 +21,7 @@ const signUpPage = require('./views/signup');
 const dashboardPage = require('./views/dashboard');
 const registerProductPage = require('./views/registerProduct');
 const editProfilePage = require('./views/editProfile');
+const buildProcessPage = require('./views/buildProcess');
 
 // app.post('/', (req, res) => {
 //     console.log(req.body);
@@ -51,6 +52,10 @@ app.post('/intruder', (req, res) => {
 // Home Page 
 app.get('/', (req, res) => {
     res.send(homepage())
+})
+
+app.get('/buildprocess', (req, res) => {
+    res.send(buildProcessPage())
 })
 
 // Sign Up Page Get Request

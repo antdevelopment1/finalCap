@@ -1,71 +1,78 @@
 function buildProcessPage() {
     return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Affordable Security Alert</title>
-</head>
-<body>
-    <div class="dashboard-page">
-        <nav class="nav-container">
-            <div class="nav">
-                <li><a href="index.html">HOME</a></li>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles/styles.css">
+        <title>Affordable Security Alert</title>
+    </head>
+    <body>
+        <div class="prototype-page">
+            <nav class="nav-container">
+                <div class="nav">
+                    <li><a href="/">HOME</a></li>
+                </div>
+            </nav>
+            <div class="building-title-container">
+                <h1 class="building-title">Building Process</h1>
             </div>
-        </nav>
-        <div class="building-title-container">
-            <h1 class="building-title">Building Process</h1>
+            <div class="main-content">
+                <div class="lg-p">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Viverra justo nec ultrices dui sapien eget mi. 
+                    Consectetur purus ut faucibus pulvinar. Massa sed elementum tempus egestas sed sed risus pretium. 
+                    Risus at ultrices mi tempus imperdiet. Tempor orci dapibus ultrices in iaculis. 
+                    Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Sodales neque sodales ut etiam sit. 
+                    Diam sit amet nisl suscipit adipiscing bibendum est ultricies.
+                    </p>
+                </div>
+                <div class="content content1">
+                    <div class="img-container">
+                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
+                <div class="content content2">
+                    <div class="img-container">
+                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
+                <div class="content content1">
+                    <div class="img-container">
+                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
+                <div class="content content2">
+                    <div class="img-container">
+                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="main-img-container">
-            <div class="image-container">
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-            </div>
-            <div class="image-container">
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-            </div>
-            <div class="image-container">
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-                <div class="image">
-                    <img src="../tempImg.jpg" alt="" class="img">
-                    <figcaption>SOME CAPTION HERE</figcaption>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
 `;
 }
 
