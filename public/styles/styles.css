@@ -125,7 +125,7 @@ li {
 .button-container {
     height: 100%;
     width: 70%;
-    margin: 0 auto 10rem auto;
+    margin: 2rem auto 12rem auto;
     padding: 4rem 1rem;
     display: flex;
     justify-content: center;
@@ -263,7 +263,7 @@ li {
 
     .button-container {
         margin-top: 2rem;
-        margin-bottom: 13rem;
+        margin-bottom: 15rem;
     }
 
 }
@@ -273,7 +273,7 @@ li {
     
     .nav-container .nav{
         justify-content: space-evenly;
-        /* padding-right: 0rem; */
+        padding-right: 0rem;
         /* outline: 2px solid green; */
     }
 
@@ -298,7 +298,7 @@ li {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 8rem;
+        margin-bottom: 10rem;
         width: 70%;
     }
 
@@ -513,7 +513,7 @@ form {
         width: 100%;
         display: flex; 
         margin: 0 0 2px 0;
-        padding: 20px 0;
+        padding: 10px 0;
         /* outline: 2px solid green; */
         display: flex;
         align-items: center;
@@ -693,7 +693,7 @@ form {
     .login-title,
     .signup-title {
         /* outline: 3px solid yellow; */
-        font-size: 1.9rem;
+        font-size: 1.75rem;
     }
 
     .register-form-title h2,
@@ -707,8 +707,8 @@ form {
         .login-title,
         .signup-title {
             /* outline: 3px solid yellow; */
-            font-size: 1.7rem;
-            padding: 5px;
+            font-size: 1.5rem;
+            padding: 10px;
         }
 
         .register-form-title h2,
@@ -718,6 +718,16 @@ form {
             padding: 5px;
         }   
     }
+    @media screen and (max-width: 350px) { 
+        .register-title,
+        .login-title,
+        .signup-title {
+            /* outline: 3px solid yellow; */
+            font-size: 1.4rem;
+        }
+
+    }
+
 }
 
 
