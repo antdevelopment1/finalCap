@@ -369,14 +369,16 @@ form {
 
 .register-page,
 .login-page,
-.signup-page {
+.signup-page,
+.edit-username-page {
     height: 100%;
     width: 100%;
 }
 
 .register-form-title,
 .login-form-title,
-.signup-form-title {
+.signup-form-title,
+.edit-username-form-title {
     /* outline: 1px solid red; */
     height: 100%;
     width: 100%;
@@ -388,14 +390,16 @@ form {
 
 .register-title,
 .login-title,
-.signup-title {
+.signup-title,
+.edit-username-title {
     margin-top: 8rem;
     /* outline: 3px solid yellow; */
 }
 
 .register-product-form,
 .login-form,
-.signup-form {
+.signup-form,
+.edit-username-form {
     height: 100%;
     width: 60%; 
     margin: 2rem auto 12rem auto;
@@ -408,7 +412,8 @@ form {
 
 .register-form-child,
 .login-form-child,
-.signup-form-child {
+.signup-form-child,
+.edit-username-form-child {
     font-size: 1.9rem;
     /* outline: 1px solid green; */
     height: 100%;
@@ -424,7 +429,8 @@ form {
 
 .register-form-child .label,
 .login-form-child .label,
-.signup-form-child .label {
+.signup-form-child .label,
+.edit-username-form-child .label {
     /* outline: 1px solid purple; */
     display: flex;
     justify-content: center;
@@ -434,7 +440,8 @@ form {
 
 .register-form-child .field,
 .login-form-child .field,
-.signup-form-child .field{
+.signup-form-child .field,
+.edit-username-form-child .field{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -442,7 +449,8 @@ form {
 
 .register-input,
 .login-input,
-.signup-input {
+.signup-input,
+.edit-username-input {
     font-size: 1.6rem;
     width: 100%;
     padding: 16px 20px;
@@ -471,7 +479,7 @@ form {
 .register-submit-btn-container .register-submit-btn,
 .login-submit-btn-container .login-submit-btn,
 .signup-submit-btn-container .signup-submit-btn {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
