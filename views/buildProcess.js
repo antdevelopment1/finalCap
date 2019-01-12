@@ -69,6 +69,16 @@ function buildProcessPage() {
                         </p>
                     </div>
                 </div>
+                <div class="content content1">
+                    <div class="img-container">
+                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
