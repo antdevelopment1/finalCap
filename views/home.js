@@ -23,7 +23,7 @@ function homePage() {
             <p class="title-p">No one should have to budget for peace of mind.</p>
         </div>
         <div class="button-container">
-            <a href="./betaProto.html" class="btn-1">BUILD PROCESS</a>
+            <a href="/buildProcess" class="btn-1">BUILD PROCESS</a>
             <a href="./registerProduct.html" class="btn-2">LIVE DEMO</a>
         </div>
     </div>
