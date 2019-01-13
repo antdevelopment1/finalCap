@@ -14,7 +14,7 @@ function editPasswordPage() {
             <nav class="nav-container">
                     <div class="nav">
                             <li><a href="/">HOME</a></li>
-                            <li><a href="/editProfile">DASHBOARD</a></li>
+                            <li><a href="/editProfile">PROFILE</a></li>
                     </div>
                 </nav>
                 <div class="edit-password-form-title">
