@@ -232,6 +232,24 @@ app.get('/editPhonenumber', (req, res) => {
 // Update Phone Number Request
 app.post('/editPhonenumber', (req, res) => {
 
+    const phoneNumber = req.body.phoneNumber;
+    const newPhoneNumber = req.body.newPhoneNumber;
+
+    console.log(req.body);
+
+    Product.getProductByPH(phoneNumber)
+        .then(result => {
+            result.updateProductPhoneNumber(newPhoneNumber)
+                .then(result => {
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editPhoneNumber');
+                    }
+                })
+        })
+
+
 })
 
 // Edit Email Page

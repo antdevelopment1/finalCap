@@ -21,17 +21,17 @@ return `
                     <h1 class="edit-phone-number-title">Update Phone Number</h1> 
                     <h2>Please fill in the information below to edit your phone number.</h2>
                 </div>
-                 <form action="/login" method="POST" class="edit-phone-number-form">  
+                 <form action="/editPhonenumber" method="POST" class="edit-phone-number-form">  
                   <div class="edit-phone-number-form-child">
-                    <label for="phone-number" class="label">Current phone number:</label>
+                    <label for="phoneNumber" class="label">Current phone number:</label>
                     <div class="field">
-                      <input name="phone-number" id="phone-number"  type="text"  value="" placeholder="Current phone number" class="edit-phone-number-input" required>
+                      <input name="phoneNumber" id="phoneNumber"  type="text"  value="" placeholder="Current phone number" class="edit-phone-number-input" required>
                     </div>
                   </div>
                    <div class="edit-phone-number-form-child">
-                       <label for="phone-number" class="label">New phone number:</label>
+                       <label for="newPhoneNumber" class="label">New phone number:</label>
                        <div class="field">
-                           <input name="phone-number" id="phone-number"  type="text"  value="" placeholder="New phone number" class="edit-phone-number-input" required>
+                           <input name="newPhoneNumber" id="newPhoneNumber"  type="text"  value="" placeholder="New phone number" class="edit-phone-number-input" required>
                        </div>
                    </div>
                    <div class="edit-phone-number-form-child login-submit">
