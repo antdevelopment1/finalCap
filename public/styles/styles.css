@@ -86,17 +86,21 @@ li {
     opacity: .6;
 }
 
-.title-container
+.title-container,
 .edit-title-container {
     height: 100%;
     width: 100%;
     padding: 11rem 0 0 0;
-    /* outline: 1px solid white; */
+    /* outline: 13px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.edit-title-container {
+    padding-top: 0;
 }
 
 .title,
@@ -547,7 +551,9 @@ form {
 .login-page,
 .signup-page,
 .edit-username-page,
-.edit-password-page {
+.edit-password-page,
+.edit-email-page,
+.edit-phone-number-page {
     height: 100%;
     width: 100%;
 }
@@ -555,8 +561,10 @@ form {
 .register-form-title,
 .login-form-title,
 .signup-form-title,
-.edit-username-form-title
-.edit-password-form-title {
+.edit-username-form-title,
+.edit-password-form-title,
+.edit-phone-number-form-title,
+.edit-email-form-title {
     /* outline: 1px solid red; */
     height: 100%;
     width: 100%;
@@ -570,7 +578,9 @@ form {
 .login-title,
 .signup-title,
 .edit-username-title,
-.edit-password-title {
+.edit-password-title,
+.edit-phone-number-title,
+.edit-email-title {
     margin-top: 8rem;
     /* outline: 3px solid yellow; */
 }
@@ -579,7 +589,9 @@ form {
 .login-form,
 .signup-form,
 .edit-username-form,
-.edit-password-form {
+.edit-password-form,
+.edit-phone-number-form,
+.edit-email-form {
     height: 100%;
     width: 60%; 
     margin: 2rem auto 12rem auto;
@@ -594,7 +606,9 @@ form {
 .login-form-child,
 .signup-form-child,
 .edit-username-form-child,
-.edit-password-form-child {
+.edit-password-form-child,
+.edit-phone-number-form-child,
+.edit-email-form-child{
     font-size: 1.9rem;
     /* outline: 1px solid green; */
     height: 100%;
@@ -612,7 +626,9 @@ form {
 .login-form-child .label,
 .signup-form-child .label,
 .edit-username-form-child .label,
-.edit-password-form-child .label {
+.edit-password-form-child .label,
+.edit-phone-number-form-child .label,
+.edit-email-form-child .label {
     /* outline: 1px solid purple; */
     display: flex;
     justify-content: center;
@@ -624,17 +640,22 @@ form {
 .login-form-child .field,
 .signup-form-child .field,
 .edit-username-form-child .field,
-.edit-password-form-child .field{
+.edit-password-form-child .field,
+.edit-email-form-child .field,
+.edit-phone-number-form-child .field{
     display: flex;
     width: 100%;
     justify-content: center;
+    /* outline: 1px solid red; */
 }
 
 .register-input,
 .login-input,
 .signup-input,
 .edit-username-input,
-.edit-password-input {
+.edit-password-input,
+.edit-email-input,
+.edit-phone-number-input {
     font-size: 1.6rem;
     width: 100%;
     padding: 16px 20px;
@@ -648,7 +669,9 @@ form {
 
 .register-submit-btn-container,
 .login-submit-btn-container,
-.signup-submit-btn-container {
+.signup-submit-btn-container,
+.phone-number-submit-btn-container,
+.email-submit-btn-container {
     /* outline: 4px solid white;  */
     width: 100%;
     height: 100%;
@@ -662,7 +685,9 @@ form {
 
 .register-submit-btn-container .register-submit-btn,
 .login-submit-btn-container .login-submit-btn,
-.signup-submit-btn-container .signup-submit-btn {
+.signup-submit-btn-container .signup-submit-btn,
+.phone-number-submit-btn-container .phone-number-submit-btn,
+.email-submit-btn-container .email-submit-btn{
   /* outline: 1px solid red; */
   display: flex;
   justify-content: center;
