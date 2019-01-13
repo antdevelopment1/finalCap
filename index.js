@@ -175,9 +175,53 @@ app.get('/editUsername', (req, res) => {
     res.send(editUsernamePage());
 })
 
+// Update Username Request
+app.post('/editUsername', (req, res) => {
+    const username = req.body.username;
+    const newUsername = req.body.newUsername;
+
+    console.log(req.body);
+
+    User.getUserByUsername(username)    
+        .then(result => {
+            console.log(result)
+            result.updateUsername(newUsername)
+                .then(result => {
+                    console.log(result);
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editUsername');
+                    }
+                })
+        })
+
+
+})
+
 // Update Password Page
 app.get('/editPassword', (req, res) => {
     res.send(editPasswordPage());
+})
+
+// Update Password Request
+app.post('/editPassword', (req, res) => {
+    const password = req.body.password;
+    const newPassword = req.body.newPassword;
+
+    console.log(req.body);
+    User.getUserByPassword(password)
+        .then(result => {
+            result.updatePassword(newPassword)
+                .then(result => {
+                    console.log(result);
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editPassword');
+                    }
+                })
+        })
 })
 
 // Edit Phone Number Page
@@ -185,10 +229,57 @@ app.get('/editPhonenumber', (req, res) => {
     res.send(editPhoneNumberPage());
 })
 
+// Update Phone Number Request
+app.post('/editPhonenumber', (req, res) => {
+
+    const phoneNumber = req.body.phoneNumber;
+    const newPhoneNumber = req.body.newPhoneNumber;
+
+    console.log(req.body);
+
+    Product.getProductByPH(phoneNumber)
+        .then(result => {
+            result.updateProductPhoneNumber(newPhoneNumber)
+                .then(result => {
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editPhoneNumber');
+                    }
+                })
+        })
+
+
+})
+
 // Edit Email Page
 app.get('/editEmail', (req, res) => {
     res.send(editEmailPage());
 })
+
+// Update Email Request
+app.post('/editEmail', (req, res) => {
+
+    const email = req.body.email;
+    const newEmail = req.body.newEmail;
+
+    console.log(req.body);
+
+    User.getUserByEmail(email) 
+        .then(result => {
+            result.updateEmail(newEmail)
+                .then(result => {
+                    console.log(result);
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editEmail');
+                    }
+                })
+        })
+
+})
+
 
 
 app.listen(3000, () => {
