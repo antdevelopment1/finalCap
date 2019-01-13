@@ -19,19 +19,19 @@ function editPasswordPage() {
                 </nav>
                 <div class="edit-password-form-title">
                     <h1 class="edit-password-title">Update Password</h1> 
-                    <h2>Please fill in the information below to edit your username.</h2>
+                    <h2>Please fill in the information below to edit your password.</h2>
                 </div>
                  <form action="/login" method="POST" class="edit-password-form">  
                   <div class="edit-password-form-child">
-                    <label for="username" class="label">Current Password:</label>
+                    <label for="password" class="label">Current Password:</label>
                     <div class="field">
-                      <input name="username" id="username"  type="text"  value="" placeholder="Current Password" class="edit-username-input" required>
+                      <input name="password" id="password"  type="text"  value="" placeholder="Current Password" class="edit-password-input" required>
                     </div>
                   </div>
                    <div class="edit-password-form-child">
                        <label for="password" class="label">New Password:</label>
                        <div class="field">
-                           <input name="password" id="password"  type="text"  value="" placeholder="New Password" class="edit-username-input" required>
+                           <input name="password" id="password"  type="text"  value="" placeholder="New Password" class="edit-password-input" required>
                        </div>
                    </div>
                    <div class="edit-password-form-child login-submit">
