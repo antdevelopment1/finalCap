@@ -21,7 +21,7 @@ function editPasswordPage() {
                     <h1 class="edit-password-title">Update Password</h1> 
                     <h2>Please fill in the information below to edit your password.</h2>
                 </div>
-                 <form action="/login" method="POST" class="edit-password-form">  
+                 <form action="/editPassword" method="POST" class="edit-password-form">  
                   <div class="edit-password-form-child">
                     <label for="password" class="label">Current Password:</label>
                     <div class="field">
@@ -29,9 +29,9 @@ function editPasswordPage() {
                     </div>
                   </div>
                    <div class="edit-password-form-child">
-                       <label for="password" class="label">New Password:</label>
+                       <label for="newPassword" class="label">New Password:</label>
                        <div class="field">
-                           <input name="password" id="password"  type="text"  value="" placeholder="New Password" class="edit-password-input" required>
+                           <input name="newPassword" id="newPassword"  type="text"  value="" placeholder="New Password" class="edit-password-input" required>
                        </div>
                    </div>
                    <div class="edit-password-form-child login-submit">

@@ -206,7 +206,22 @@ app.get('/editPassword', (req, res) => {
 
 // Update Password Request
 app.post('/editPassword', (req, res) => {
+    const password = req.body.password;
+    const newPassword = req.body.newPassword;
 
+    console.log(req.body);
+    User.getUserByPassword(password)
+        .then(result => {
+            result.updatePassword(newPassword)
+                .then(result => {
+                    console.log(result);
+                    if (result === 1) {
+                        res.redirect('/dashboard');
+                    } else {
+                        res.redirect('/editPassword');
+                    }
+                })
+        })
 })
 
 // Edit Phone Number Page
@@ -215,7 +230,12 @@ app.get('/editPhonenumber', (req, res) => {
 })
 
 // Update Phone Number Request
-app.post('/editUsername', (req, res) => {
+app.post('/editPhonenumber', (req, res) => {
+
+    const phoneNumber = req.body.phoneNumber;
+    const newPhoneNumber = req.body.newPhoneNumber;
+
+    console.log(req.body);
 
 })
 
@@ -225,7 +245,12 @@ app.get('/editEmail', (req, res) => {
 })
 
 // Update Email Request
-app.post('/editUsername', (req, res) => {
+app.post('/editEmail', (req, res) => {
+
+    const email = req.body.email;
+    const newEmail = req.body.newEmail;
+
+    console.log(req.body);
 
 })
 
