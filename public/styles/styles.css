@@ -27,7 +27,8 @@ li {
 }
 
 
-.landing-page { 
+.landing-page,
+.edit-profile-page { 
     animation: .7s fadein .4s forwards;
     opacity: 0;
     height: 100%;
@@ -85,7 +86,8 @@ li {
     opacity: .6;
 }
 
-.title-container {
+.title-container
+.edit-title-container {
     height: 100%;
     width: 100%;
     padding: 11rem 0 0 0;
@@ -97,7 +99,9 @@ li {
     text-align: center;
 }
 
-.title {
+.title,
+.dashboard-title,
+.edit-title {
     width: 100%;
     padding: 0 1rem;
     font-size: 6rem;
@@ -111,6 +115,20 @@ li {
     font-weight: 600;
 }
 
+.edit-title {
+    font-size: 5rem;
+    color: rgba(0, 0, 0, .5);
+    text-shadow: 2px 2px 2px #333;
+    letter-spacing: 15px;
+    margin-top: 8rem;
+}
+
+.dashboard-title {
+    color: rgba(0, 0, 0, .6);
+    text-shadow: 2px 2px 2px #333;
+    font-size: 4.5rem;
+}
+
 .title-p {
     width: 90%;
     text-align: center;
@@ -122,18 +140,41 @@ li {
     text-shadow: 3px 3px 3px #333;
 }
 
-.button-container {
+.button-container,
+.dashboard-btns,
+.edit-button-container-top,
+.edit-button-container-bottom {
     height: 100%;
     width: 70%;
-    margin: 2rem auto 12rem auto;
+    margin: 0 auto 10rem auto;
     padding: 4rem 1rem;
     display: flex;
     justify-content: center;
     /* outline: 1px solid white; */
 }
 
+.edit-button-container-top {
+    margin-bottom: 0;
+    margin-top: 6rem;
+    padding-bottom: 1rem;
+}
+
+.edit-button-container-bottom {
+    padding-top: 1rem;
+    margin-bottom: 15rem;
+}
+
+
+.dashboard-btns {
+    margin-top: 3rem;
+    margin-bottom: 20rem;
+}
+
 .btn-1,
-.btn-2 {
+.btn-2,
+.editbtn,
+.regbtn,
+.edit-btn {
     padding: .7rem 2.5rem;
     font-size: 1.7rem;
     width: 100%;
@@ -150,7 +191,8 @@ li {
 }
 
 .btn-1:hover,
-.btn-2:hover {
+.btn-2:hover,
+.edit-btn:hover {
     transform: scale(1);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 
@@ -159,15 +201,42 @@ li {
 
 /* MEDIA QUERIES FOR LANDING PAGE */
 
+@media screen and (max-width: 1400px) {
+
+    .edit-title {
+        font-size: 4.5rem;
+    }
+
+    .edit-button-container-top {
+        margin-top: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+
+    .edit-button-container-top,
+    .edit-button-container-bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        /* outline: 1px solid red; */
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .title-container {
         padding: 6rem 0 1rem 0;
         /* outline: 1px solid white; */
     }
 
-    .title{
+    .title{ 
         font-size: 5rem;
         letter-spacing: 8px;
+    }
+
+    .dashboard-title {
+        font-size: 4rem;
+        line-height: 5rem;
     }
 
     .title-p {
@@ -181,18 +250,46 @@ li {
         margin-bottom: 9rem;
     }
 
-    .btn-1, .btn-2 {
+    .btn-1, .btn-2, {
         margin-top: 3rem;
+    }
+
+    .dashboard-btns {
+        margin-top: 1rem;
+    }
+
+    .editbtn,
+    .regbtn {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .title {
         font-size: 4.5rem;
+
     }
 
     .title-p {
         font-size: 1.9rem;
+    }
+
+    .dashboard-title {
+        font-size: 4rem;
+    }
+
+    .dashboard-btns {
+        margin-top: 1rem;
+    }
+
+    .editbtn,
+    .regbtn {
+        /* outline: 1px solid red; */
+        margin-left: 0rem;
+        margin-right: 0rem;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .btn-1, .btn-2 {
@@ -205,11 +302,20 @@ li {
     .title {
         font-size: 4rem;
         letter-spacing: 6px;
-        line-height: 6rem;
     }
 
     .title-p {
         font-size: 1.7rem;
+    }
+
+    .edit-title {
+        font-size: 4rem;
+    }
+
+    .edit-button-container-top,
+    .edit-button-container-bottom {
+        width: 60%;
+        /* outline: 1px solid red; */
     }
 
     .btn-1, .btn-2 {
@@ -237,9 +343,17 @@ li {
         font-size: 1.4rem;
     }
 
+    .dashboard-title {
+        font-size: 3.4rem;
+        line-height: 4.7rem;
+        /* outline: 1px solid red; */
+    }
+
+
     .button-container {
         width: 80%;
     }
+    
     
     .btn-1,
     .btn-2 {
@@ -261,11 +375,41 @@ li {
         margin-top: 2rem;
     }
 
-    .button-container {
-        margin-top: 2rem;
-        margin-bottom: 15rem;
+    .dashboard-title {
+        letter-spacing: 8px;
     }
 
+    .edit-title {
+        font-size: 3.5rem;
+    }
+
+    .edit-button-container-top,
+    .edit-button-container-bottom {
+        width: 70%;
+        /* outline: 1px solid red; */
+    }
+
+     .dashboard-btns {
+        width: 100%;
+    }
+
+    .button-container {
+        margin-top: 2rem;
+        margin-bottom: 13rem;
+    } 
+
+}
+
+@media screen and (max-width: 650px) {
+    .edit-title {
+        font-size: 3.5rem;
+    }
+
+    .edit-button-container-top,
+    .edit-button-container-bottom {
+        width: 77%;
+        /* outline: 1px solid red; */
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -273,12 +417,17 @@ li {
     
     .nav-container .nav{
         justify-content: space-evenly;
-        padding-right: 0rem;
+        /* padding-right: 0rem; */
         /* outline: 2px solid green; */
     }
 
     .title-container {
         padding-top: 3rem;
+    }
+
+    .edit-title {
+        font-size: 3rem;
+        letter-spacing: 7px;
     }
     
     .title {
@@ -293,13 +442,31 @@ li {
         font-size: .9rem;
     }
 
-    .button-container {
+    .dashboard-title {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .button-container,
+    .dashboard-btns {
         /* padding-top: 1rem; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 10rem;
+        margin-bottom: 8rem;
         width: 70%;
+    }
+
+    .edit-btn {
+        font-size: 1.3rem;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .edit-button-container-top,
+    .edit-button-container-bottom {
+        width: 80%;
+        /* outline: 1px solid red; */
     }
 
     .btn-1, 
@@ -333,8 +500,19 @@ li {
     }
 }
 
+@media screen and (max-width: 380px) { 
+    .edit-title {
+        font-size: 2.7rem;
+        letter-spacing: 5px;
+    }
+    
+    .edit-button-container-top,
+    .edit-button-container-bottom {
+        width: 90%;
+        /* outline: 1px solid red; */
+    }
 
-
+}
 
 /* ================================== */
             /* Sign Up Page */
@@ -367,14 +545,18 @@ form {
 
 .register-page,
 .login-page,
-.signup-page {
+.signup-page,
+.edit-username-page,
+.edit-password-page {
     height: 100%;
     width: 100%;
 }
 
 .register-form-title,
 .login-form-title,
-.signup-form-title {
+.signup-form-title,
+.edit-username-form-title
+.edit-password-form-title {
     /* outline: 1px solid red; */
     height: 100%;
     width: 100%;
@@ -386,14 +568,18 @@ form {
 
 .register-title,
 .login-title,
-.signup-title {
+.signup-title,
+.edit-username-title,
+.edit-password-title {
     margin-top: 8rem;
     /* outline: 3px solid yellow; */
 }
 
 .register-product-form,
 .login-form,
-.signup-form {
+.signup-form,
+.edit-username-form,
+.edit-password-form {
     height: 100%;
     width: 60%; 
     margin: 2rem auto 12rem auto;
@@ -406,7 +592,9 @@ form {
 
 .register-form-child,
 .login-form-child,
-.signup-form-child {
+.signup-form-child,
+.edit-username-form-child,
+.edit-password-form-child {
     font-size: 1.9rem;
     /* outline: 1px solid green; */
     height: 100%;
@@ -422,7 +610,9 @@ form {
 
 .register-form-child .label,
 .login-form-child .label,
-.signup-form-child .label {
+.signup-form-child .label,
+.edit-username-form-child .label,
+.edit-password-form-child .label {
     /* outline: 1px solid purple; */
     display: flex;
     justify-content: center;
@@ -432,7 +622,9 @@ form {
 
 .register-form-child .field,
 .login-form-child .field,
-.signup-form-child .field{
+.signup-form-child .field,
+.edit-username-form-child .field,
+.edit-password-form-child .field{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -440,7 +632,9 @@ form {
 
 .register-input,
 .login-input,
-.signup-input {
+.signup-input,
+.edit-username-input,
+.edit-password-input {
     font-size: 1.6rem;
     width: 100%;
     padding: 16px 20px;
@@ -513,7 +707,7 @@ form {
         width: 100%;
         display: flex; 
         margin: 0 0 2px 0;
-        padding: 10px 0;
+        padding: 20px 0;
         /* outline: 2px solid green; */
         display: flex;
         align-items: center;
@@ -693,7 +887,7 @@ form {
     .login-title,
     .signup-title {
         /* outline: 3px solid yellow; */
-        font-size: 1.75rem;
+        font-size: 1.9rem;
     }
 
     .register-form-title h2,
@@ -707,8 +901,8 @@ form {
         .login-title,
         .signup-title {
             /* outline: 3px solid yellow; */
-            font-size: 1.5rem;
-            padding: 10px;
+            font-size: 1.7rem;
+            padding: 5px;
         }
 
         .register-form-title h2,
@@ -718,24 +912,14 @@ form {
             padding: 5px;
         }   
     }
-    @media screen and (max-width: 350px) { 
-        .register-title,
-        .login-title,
-        .signup-title {
-            /* outline: 3px solid yellow; */
-            font-size: 1.4rem;
-        }
-
-    }
-
 }
 
 
 /* ====================== */
 /* DASHBOARD */
 /* ====================== */
-.dashboard-title-container {
-    /* outline: 1px solid white; */
+/* .dashboard-title-container {
+    outline: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -748,15 +932,15 @@ form {
     justify-content: center;
     align-items: center;
     padding: 8rem 0 16rem 0;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 .reg-btn-1,
 .reg-btn-2 {
     padding: .7rem .5rem;
     font-size: 1.7rem;
-    /* outline: 2px solid purple; */
-    /* border: 3px solid  white; */
+    outline: 2px solid purple;
+    border: 3px solid  white;
     border: 3px solid rgba(255, 255, 255, .2);
     border-radius: 10px;
     text-decoration: none;
@@ -772,29 +956,26 @@ form {
 .reg-btn-2:hover {
     transform: scale(1);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
-}
+} */
 
 @media screen and (max-width: 900px) {
-    .dashboard-btn-container {
+    /* .dashboard-btn-container {
         padding: 5rem 0;
-    }
+    } */
 }
 
 @media screen and (max-width: 650px) {
-    .dashboard-btn-container {
+    /* .dashboard-btns {
         width: 100%;
         flex-direction: column;
-        /* outline: 1px solid white; */
+        outline: 1px solid white;
     }
     .reg-btn-1,
     .reg-btn-2 {
         width: 70%;
-    }
+    } */
 }
 
-/* ====================== */
-/* PROTOTYPE PAGE */
-/* ====================== */
 
 /* ====================== */
 /* PROTOTYPE PAGE */
@@ -849,7 +1030,7 @@ form {
 }
 
 .content {
-    outline: 2px solid purple;
+    outline: 2px solid green;
     height: 100%;
     width: 100%;
     padding: 2rem;
@@ -885,9 +1066,72 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 1px solid yellowgreen;
+    outline: 2px solid orange;
 }
 
 .p-container p {
     width: 80%;
 }
+
+@media screen and (max-width: 700px) {
+    .content1,
+    .content2 {
+        flex-direction: column;
+    }
+
+    .img-container {
+        width: 40%;
+    }
+    .p-container {
+        width: 70%;
+        margin-top: 1rem;
+    }
+}
+
+
+/* ================= */
+/* edit profile  */
+/* ================= */
+
+/* .edit-title-container {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 0;
+    outline: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-title {
+    height: 100%;
+    width: 50%;
+    padding: 1rem;
+    outline: 1px solid blue;
+    margin-top: 0;
+}
+
+.main-edit-btn-container {
+    outline: 1px solid white;
+    height: 100%;
+    width: 100%;
+    margin: 8rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button-container {
+    height: 100%;
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    outline: 1px solid green;
+}
+
+.edit-btn { */
+    
+/* } */

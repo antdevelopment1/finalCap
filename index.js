@@ -22,7 +22,10 @@ const dashboardPage = require('./views/dashboard');
 const registerProductPage = require('./views/registerProduct');
 const editProfilePage = require('./views/editProfile');
 const buildProcessPage = require('./views/buildProcess');
-
+const editPasswordPage = require('./views/editPassword');
+const editUsernamePage = require('./views/editUsername');
+const editPhoneNumberPage = require('./views/editPhoneNumber');
+const editEmailPage = require('./views/editEmail');
 // app.post('/', (req, res) => {
 //     console.log(req.body);
 //     res.send(
@@ -104,6 +107,18 @@ app.post('/login', (req, res) => {
             })
 })
 
+// Logout Post Request
+app.post('/logout', (req, res) => {
+    res.send(homepage());
+})
+
+
+// ================================
+//       Routes GET / POST
+//   Once Inside User Dashboard
+// ================================
+
+// Register Product
 // Welcome Dashbaord Page Once Logged In
 app.get(`/dashboard`, (req, res) => {
     res.send(dashboardPage());
@@ -126,7 +141,7 @@ app.post('/registerProduct', (req, res) => {
     User.getUserByUsername(username)
             .catch(err => {
                 console.log('There was an error retriving you info');
-                res.redirect('/login');
+                res.redirect('/registerProduct');
             })
             .then(result => {
                 const user_id = result.id;
@@ -150,33 +165,30 @@ app.post('/registerProduct', (req, res) => {
     
 })
 
+// Edit Profile
 app.get('/editProfile', (req, res) => {
     res.send(editProfilePage())
 })
 
-// // Get Users Info / View Account
-// app.get(`/dashboard/:id(\\d+)/`, (req, res) => {
-//     res.send(dashboardPage());
-// })
-
-// Logout Post Request
-app.post('/logout', (req, res) => {
-    res.send(homepage());
+// Update Username Page
+app.get('/editUsername', (req, res) => {
+    res.send(editUsernamePage());
 })
 
+// Update Password Page
+app.get('/editPassword', (req, res) => {
+    res.send(editPasswordPage());
+})
 
-// ================================
-//       Routes GET / POST
-//   Once Inside User Dashboard
-// ================================
+// Edit Phone Number Page
+app.get('/editPhonenumber', (req, res) => {
+    res.send(editPhoneNumberPage());
+})
 
-// Register Product
-
-// Edit Profile
-
-// Update Username
-
-// Update Password
+// Edit Email Page
+app.get('/editEmail', (req, res) => {
+    res.send(editEmailPage());
+})
 
 
 app.listen(3000, () => {
