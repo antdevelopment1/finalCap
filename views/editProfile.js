@@ -13,7 +13,7 @@ function editProfilePage() {
     <div class="edit-profile-page">
         <nav class="nav-container">
             <div class="nav">
-                    <li><a href="/">HOME</a></li>
+                    <li><a href="/dashboard">DASHBOARD</a></li>
                     <li><a href="/">LOGOUT</a></li>
             </div>
         </nav>
