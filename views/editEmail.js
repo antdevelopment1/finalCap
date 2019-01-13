@@ -21,7 +21,7 @@ function editEmailPage() {
                         <h1 class="edit-email-title">Update Email</h1> 
                         <h2>Please fill in the information below to edit your email.</h2>
                     </div>
-                     <form action="/login" method="POST" class="edit-email-form">  
+                     <form action="/editEmail" method="POST" class="edit-email-form">  
                       <div class="edit-email-form-child">
                         <label for="email" class="label">Current email:</label>
                         <div class="field">
@@ -29,9 +29,9 @@ function editEmailPage() {
                         </div>
                       </div>
                        <div class="edit-email-form-child">
-                           <label for="email" class="label">New email:</label>
+                           <label for="newEmail" class="label">New email:</label>
                            <div class="field">
-                               <input name="email" id="email"  type="text"  value="" placeholder="New email" class="edit-email-input" required>
+                               <input name="newEmail" id="newEmail"  type="text"  value="" placeholder="New email" class="edit-email-input" required>
                            </div>
                        </div>
                        <div class="edit-email-form-child email-submit">

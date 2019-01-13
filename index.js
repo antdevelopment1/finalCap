@@ -216,7 +216,7 @@ app.post('/editPassword', (req, res) => {
                 .then(result => {
                     console.log(result);
                     if (result === 1) {
-                        res.redirect('/dashboard');
+                        res.redirect('/editProfile');
                     } else {
                         res.redirect('/editPassword');
                     }
@@ -231,11 +231,6 @@ app.get('/editPhonenumber', (req, res) => {
 
 // Update Phone Number Request
 app.post('/editPhonenumber', (req, res) => {
-
-    const phoneNumber = req.body.phoneNumber;
-    const newPhoneNumber = req.body.newPhoneNumber;
-
-    console.log(req.body);
 
 })
 
@@ -252,7 +247,21 @@ app.post('/editEmail', (req, res) => {
 
     console.log(req.body);
 
+    User.getUserByEmail(email) 
+        .then(result => {
+            result.updateEmail(newEmail)
+                .then(result => {
+                    console.log(result);
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editEmail');
+                    }
+                })
+        })
+
 })
+
 
 
 app.listen(3000, () => {
