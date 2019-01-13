@@ -150,7 +150,7 @@ li {
 .edit-button-container-bottom {
     height: 100%;
     width: 70%;
-    margin: 0 auto 10rem auto;
+    margin: 0 auto 12rem auto;
     padding: 4rem 1rem;
     display: flex;
     justify-content: center;
@@ -680,7 +680,7 @@ form {
     align-items: center;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .register-submit-btn-container .register-submit-btn,
