@@ -18,9 +18,9 @@ function dashboardPage(content) {
             </div>
         </nav>
         <div class="title-container">
-            <h1 class="dashboard-title">Pseudo Secure</h1>
+            <h1 class="dashboard-title">Pseudo Secure Dashboard</h1>
         </div>
-        <div class="dashboad-btns">
+        <div class="dashboard-btns">
             <a href='/registerProduct' class="btn-1 regbtn">REGISTER PRODUCT</a>
             <a href="/editProfile" class="btn-2 editbtn">VIEW ACCOUNT</a>
 
