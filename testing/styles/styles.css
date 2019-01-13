@@ -854,7 +854,7 @@ form {
 }
 
 .content {
-    outline: 2px solid purple;
+    outline: 2px solid green;
     height: 100%;
     width: 100%;
     padding: 2rem;
@@ -890,11 +890,26 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 1px solid yellowgreen;
+    outline: 2px solid orange;
 }
 
 .p-container p {
     width: 80%;
+}
+
+@media screen and (max-width: 700px) {
+    .content1,
+    .content2 {
+        flex-direction: column;
+    }
+
+    .img-container {
+        width: 40%;
+    }
+    .p-container {
+        width: 70%;
+        margin-top: 1rem;
+    }
 }
 
 
