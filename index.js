@@ -175,9 +175,38 @@ app.get('/editUsername', (req, res) => {
     res.send(editUsernamePage());
 })
 
+// Update Username Request
+app.post('/editUsername', (req, res) => {
+    const username = req.body.username;
+    const newUsername = req.body.newUsername;
+
+    console.log(req.body);
+
+    User.getUserByUsername(username)    
+        .then(result => {
+            console.log(result)
+            result.updateUsername(newUsername)
+                .then(result => {
+                    console.log(result);
+                    if (result === 1) {
+                        res.redirect('/editProfile');
+                    } else {
+                        res.redirect('/editUsername');
+                    }
+                })
+        })
+
+
+})
+
 // Update Password Page
 app.get('/editPassword', (req, res) => {
     res.send(editPasswordPage());
+})
+
+// Update Password Request
+app.post('/editPassword', (req, res) => {
+
 })
 
 // Edit Phone Number Page
@@ -185,9 +214,19 @@ app.get('/editPhonenumber', (req, res) => {
     res.send(editPhoneNumberPage());
 })
 
+// Update Phone Number Request
+app.post('/editUsername', (req, res) => {
+
+})
+
 // Edit Email Page
 app.get('/editEmail', (req, res) => {
     res.send(editEmailPage());
+})
+
+// Update Email Request
+app.post('/editUsername', (req, res) => {
+
 })
 
 

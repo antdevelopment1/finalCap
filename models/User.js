@@ -86,6 +86,7 @@ class User {
 
     // Update user username
     updateUsername(username) {
+        console.log(username)
         return db.result(`update users set username=$2 where id=$1`, [this.id, username])
             .then(updatedRow => {
                 if (updatedRow.rowCount === 1) {
@@ -126,7 +127,7 @@ class User {
             })
 
     }
-    
+
 
     // =====================
     //      Delete User

@@ -21,7 +21,7 @@ function editUsernamePage() {
                     <h1 class="edit-username-title">Update Username</h1> 
                     <h2>Please fill in the information below to edit your username.</h2>
                 </div>
-                 <form action="/login" method="POST" class="edit-username-form">  
+                 <form action="/editUsername" method="POST" class="edit-username-form">  
                   <div class="edit-username-form-child">
                     <label for="username" class="label">Current Username:</label>
                     <div class="field">
@@ -29,9 +29,9 @@ function editUsernamePage() {
                     </div>
                   </div>
                    <div class="edit-username-form-child">
-                       <label for="password" class="label">New Username:</label>
+                       <label for="newUsername" class="label">New Username:</label>
                        <div class="field">
-                           <input name="password" id="password"  type="text"  value="" placeholder="New Username" class="edit-username-input" required>
+                           <input name="newUsername" id="newUsername"  type="text"  value="" placeholder="New Username" class="edit-username-input" required>
                        </div>
                    </div>
                    <div class="edit-username-form-child login-submit">
