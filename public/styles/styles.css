@@ -707,13 +707,21 @@ form {
 
 @media screen and (max-width: 1300px) {
     .register-title,
-    .login-title{
-        margin-top: 5rem;
+    .login-title,
+    .edit-username-title,
+    .edit-password-title,
+    .edit-phone-number-title,
+    .edit-email-title {
+            margin-top: 5rem;
     }
 
     .register-product-form,
     .login-form,
-    .signup-form {
+    .signup-form,
+    .edit-username-form,
+    .edit-password-form,
+    .edit-phone-number-form,
+    .edit-email-form {
         height: 100%;
         width: 60%; 
         margin: 0 auto 12rem auto;
@@ -726,7 +734,11 @@ form {
 
     .register-form-child,
     .login-form-child,
-    .signup-form-child {
+    .signup-form-child,
+    .edit-username-form-child,
+    .edit-password-form-child,
+    .edit-phone-number-form-child,
+    .edit-email-form-child {
         font-size: 30px;
         height: 100%;
         width: 100%;
@@ -741,28 +753,40 @@ form {
 
     .register-form-child .label,
     .login-form-child .label,
-    .signup-form-child .label{
+    .signup-form-child .label,
+    .edit-username-form-child .label,
+    .edit-password-form-child .label,
+    .edit-phone-number-form-child .label,
+    .edit-email-form-child .label {
         font-size: 1.8rem;
     }
 
     .register-input,
     .login-input,
-    .signup-input {
+    .signup-input,
+    .edit-username-input,
+    .edit-password-input,
+    .edit-email-input,
+    .edit-phone-number-input {
         font-size: 1.4rem;
     }
 
     .register-submit-btn-container,
     .login-submit-btn-container,
-    .signup-submit-btn-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    .signup-submit-btn-container,
+    .phone-number-submit-btn-container,
+    .email-submit-btn-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
 }
-.register-submit-btn-container .register-submit-btn,
-.login-submit-btn-container .login-submit-btn,
-.signup-submit-btn-container .signup-submit-btn {
+    .register-submit-btn-container .register-submit-btn,
+    .login-submit-btn-container .login-submit-btn,
+    .signup-submit-btn-container .signup-submit-btn,
+    .phone-number-submit-btn-container .phone-number-submit-btn,
+    .email-submit-btn-container .email-submit-btn {
         font-size: 1.3rem;
         color: rgba(0, 0, 0, .6);
         width: 50%;
@@ -785,7 +809,11 @@ form {
 
     .register-form-child .label,
     .login-form-child .label,
-    .signup-form-child .label {
+    .signup-form-child .label,
+    .edit-username-form-child .label,
+    .edit-password-form-child .label,
+    .edit-phone-number-form-child .label,
+    .edit-email-form-child .label {
         font-size: 1.6rem;
         justify-content: flex-start;
         /* outline: 2px solid red; */
@@ -793,13 +821,21 @@ form {
 
     .register-form-child .field .register-input,
     .login-form-child .field .login-input,
-    .signup-form-child .field .signup-input {
+    .signup-form-child .field .signup-input,
+    .edit-username-form-child .edit-username-input,
+    .edit-password-form-child .edit-password-input,
+    .edit-phone-number-form-child .edit-phone-number-input,
+    .edit-email-form-child .edit-email-input {
         font-size: 1.3rem;
+        /* outline: 1px solid red; */
+    
     }
 
     .register-submit-btn-container .register-submit-btn,
     .login-submit-btn-container .login-submit-btn,
-    .signup-submit-btn-container .signup-submit-btn {
+    .signup-submit-btn-container .signup-submit-btn,
+    .phone-number-submit-btn-container .phone-number-submit-btn,
+    .email-submit-btn-container .email-submit-btn {
         font-size: 1.1rem;
         width: 50%;
     }
@@ -808,21 +844,31 @@ form {
 @media screen and (max-width: 900px) {
     .register-submit-btn-container .register-submit-btn,
     .login-submit-btn-container .login-submit-btn,
-    .signup-submit-btn-container .signup-submit-btn {
+    .signup-submit-btn-container .signup-submit-btn,
+    .phone-number-submit-btn-container .phone-number-submit-btn,
+    .email-submit-btn-container .email-submit-btn {
         font-size: 1rem;
         padding: 15px 25px;
     }
 
     .register-input,
     .login-input,
-    .signup-input {
+    .signup-input,
+    .edit-username-input,
+    .edit-password-input,
+    .edit-email-input,
+    .edit-phone-number-input {
         padding: none;
     }
 
 
     .register-title,
     .login-title,
-    .signup-title {
+    .signup-title,
+    .edit-username-title,
+    .edit-password-title,
+    .edit-phone-number-title,
+    .edit-email-title  {
         margin-top: 8rem;
         /* outline: 3px solid yellow; */
         font-size: 2.3rem;
@@ -830,13 +876,18 @@ form {
 
     .register-form-title h2,
     .login-form-title h2,
-    .signup-form-title h2 {
+    .signup-form-title h2
+     {
         font-size: 1.5rem;
     }
 
     .register-form-child .label,
     .login-form-child .label,
-    .signup-form-child .label {
+    .signup-form-child .label,
+    .edit-username-form-child .label,
+    .edit-password-form-child .label,
+    .edit-phone-number-form-child .label,
+    .edit-email-form-child .label {
         font-size: 1.5rem;
         justify-content: flex-start;
         /* outline: 2px solid red; */
@@ -847,14 +898,22 @@ form {
 @media screen and (max-width: 850px) {
     .register-form-child .label,
     .login-form-child .label,
-    .signup-form-child .label {
+    .signup-form-child .label,
+    .edit-username-form-child .label,
+    .edit-password-form-child .label,
+    .edit-phone-number-form-child .label,
+    .edit-email-form-child .label {
         /* outline: 1px solid red; */
         width: 80%;
     }
 
     .register-title,
     .login-title,
-    .signup-title {
+    .signup-title,
+    .edit-username-title,
+    .edit-password-title,
+    .edit-phone-number-title,
+    .edit-email-title {
         /* outline: 3px solid yellow; */
         font-size: 2.1rem;
     }
@@ -870,7 +929,12 @@ form {
 @media screen and (max-width: 768px) {
     .register-form-child,
     .login-form-child,
-    .signup-form-child {
+    .signup-form-child, 
+    .edit-username-form-child,
+    .edit-password-form-child,
+    .edit-phone-number-form-child,
+    .edit-email-form-child{
+        
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -881,7 +945,11 @@ form {
 
     .register-form-child .label,
     .login-form-child .label,
-    .signup-form-child .label {
+    .signup-form-child .label,
+    .edit-username-form-child .label,
+    .edit-password-form-child .label,
+    .edit-phone-number-form-child .label,
+    .edit-email-form-child .label {
       margin-bottom: 10px;
       font-size: 1.7rem;
       justify-content: center;
@@ -892,13 +960,19 @@ form {
 @media screen and (max-width: 600px) {
     .register-form-child .field,
     .login-form-child .field,
-    .signup-form-child .field, {
+    .signup-form-child .field,
+    .edit-username-form-child .field,
+    .edit-password-form-child .field,
+    .edit-email-form-child .field,
+    .edit-phone-number-form-child .field {
         width: 100%;
     }
 
     .register-submit-btn-container .register-submit-btn,
     .login-submit-btn-container .login-submit-btn,
-    .signup-submit-btn-container .signup-submit-btn {
+    .signup-submit-btn-container .signup-submit-btn,
+    .phone-number-submit-btn-container .phone-number-submit-btn,
+    .email-submit-btn-container .email-submit-btn {
         font-size: 1rem;
         text-align: center;
         width: 70%;
@@ -910,7 +984,11 @@ form {
 
     .register-title,
     .login-title,
-    .signup-title {
+    .signup-title,
+    .edit-username-title,
+    .edit-password-title,
+    .edit-phone-number-title,
+    .edit-email-title  {
         /* outline: 3px solid yellow; */
         font-size: 1.9rem;
     }
@@ -924,7 +1002,11 @@ form {
     @media screen and (max-width: 400px) {
         .register-title,
         .login-title,
-        .signup-title {
+        .signup-title,
+        .edit-username-title,
+        .edit-password-title,
+        .edit-phone-number-title,
+        .edit-email-title  {
             /* outline: 3px solid yellow; */
             font-size: 1.7rem;
             padding: 5px;
@@ -938,69 +1020,6 @@ form {
         }   
     }
 }
-
-
-/* ====================== */
-/* DASHBOARD */
-/* ====================== */
-/* .dashboard-title-container {
-    outline: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-}
-.dashboard-btn-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8rem 0 16rem 0;
-    outline: 1px solid red;
-}
-
-.reg-btn-1,
-.reg-btn-2 {
-    padding: .7rem .5rem;
-    font-size: 1.7rem;
-    outline: 2px solid purple;
-    border: 3px solid  white;
-    border: 3px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
-    text-decoration: none;
-    margin: 1rem 2.5rem;
-    box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1);
-    text-align: center;
-    background-color: none;
-    transition: box-shadow .2s ease-in-out .1s, transform .2s ease-in-out .1s;
-}
-
-.reg-btn-1:hover,
-.reg-btn-2:hover {
-    transform: scale(1);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
-} */
-
-@media screen and (max-width: 900px) {
-    /* .dashboard-btn-container {
-        padding: 5rem 0;
-    } */
-}
-
-@media screen and (max-width: 650px) {
-    /* .dashboard-btns {
-        width: 100%;
-        flex-direction: column;
-        outline: 1px solid white;
-    }
-    .reg-btn-1,
-    .reg-btn-2 {
-        width: 70%;
-    } */
-}
-
 
 /* ====================== */
 /* PROTOTYPE PAGE */
@@ -1112,51 +1131,3 @@ form {
         margin-top: 1rem;
     }
 }
-
-
-/* ================= */
-/* edit profile  */
-/* ================= */
-
-/* .edit-title-container {
-    height: 100%;
-    width: 100%;
-    padding: 0 0 0 0;
-    outline: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.edit-title {
-    height: 100%;
-    width: 50%;
-    padding: 1rem;
-    outline: 1px solid blue;
-    margin-top: 0;
-}
-
-.main-edit-btn-container {
-    outline: 1px solid white;
-    height: 100%;
-    width: 100%;
-    margin: 8rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.edit-button-container {
-    height: 100%;
-    width: 70%;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    outline: 1px solid green;
-}
-
-.edit-btn { */
-    
-/* } */
