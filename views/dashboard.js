@@ -18,6 +18,7 @@ function dashboardPage(content) {
             </div>
         </nav>
         <div class="title-container">
+            ${content}
             <h1 class="dashboard-title">Pseudo Secure Dashboard</h1>
         </div>
         <div class="dashboard-btns">
