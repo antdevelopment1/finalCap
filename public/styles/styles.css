@@ -164,7 +164,7 @@ li {
 
 .edit-button-container-top {
     margin-bottom: 0;
-    margin-top: 6rem;
+    margin-top: 2rem;
     padding-bottom: 1rem;
 }
 
@@ -220,6 +220,11 @@ li {
         margin-top: 1rem;
         padding-top: 1.5rem;
     }
+
+
+    .edit-title-container {
+        padding-bottom: 3rem;
+    }
     
 
     .edit-button-container-top,
@@ -265,7 +270,9 @@ li {
     }
 
     .dashboard-btns {
-        margin-top: 1rem;
+        /* outline: 1px solid red; */
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     .editbtn,
@@ -287,10 +294,6 @@ li {
 
     .dashboard-title {
         font-size: 4rem;
-    }
-
-    .dashboard-btns {
-        margin-top: 1rem;
     }
 
     .editbtn,
@@ -357,6 +360,11 @@ li {
         font-size: 3.4rem;
         line-height: 4.7rem;
         /* outline: 1px solid red; */
+    }
+
+
+    .edit-title-container {
+        padding-bottom: 1.5rem;
     }
 
 
@@ -457,13 +465,22 @@ li {
         line-height: 4rem;
     }
 
+    .dashboard-btns {
+        margin-top: 2rem;
+    }
+
+
+    .edit-title-container {
+        padding-bottom: 0rem;
+    }
+
     .button-container,
     .dashboard-btns {
         /* padding-top: 1rem; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
         width: 70%;
     }
 

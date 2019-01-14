@@ -137,6 +137,9 @@ app.post('/signup', (req, res) => {
     const password = req.body.password;
 
     User.createUser(firstname, lastname, email, username, password)
+        .catch(() => {
+            res.redirect('/signup');
+        })
         .then(newUser => {
             req.session.user = newUser;
             res.redirect('/dashboard');
