@@ -46,6 +46,7 @@ const editPasswordPage = require('./views/editPassword');
 const editUsernamePage = require('./views/editUsername');
 const editPhoneNumberPage = require('./views/editPhoneNumber');
 const editEmailPage = require('./views/editEmail');
+const demoPage = require('./views/demo');
 
 // Sessions setup to track user
 app.use(session({
@@ -121,6 +122,10 @@ app.get('/', (req, res) => {
 
 app.get('/buildprocess', (req, res) => {
     res.send(buildProcessPage())
+})
+
+app.get('/demo', (req, res) => {
+    res.send(demoPage());
 })
 
 // Sign Up Page Get Request

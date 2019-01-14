@@ -24,7 +24,7 @@ function homePage() {
         </div>
         <div class="button-container">
             <a href="/buildProcess" class="btn-1">BUILD PROCESS</a>
-            <a href="./registerProduct.html" class="btn-2">LIVE DEMO</a>
+            <a href="/demo" class="btn-2">LIVE DEMO</a>
         </div>
     </div>
     <script src="scripts/index.js"></script>
