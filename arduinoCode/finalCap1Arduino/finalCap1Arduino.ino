@@ -35,6 +35,7 @@ void loop() {
   inches = (duration / 2) / 74;
 
   spaceIntruded = inches;
+  Serial.println(spaceIntruded);
   
   if (spaceIntruded <= 50 || spaceIntruded >= 1000){
       digitalWrite(ledPin, HIGH);
