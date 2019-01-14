@@ -86,6 +86,11 @@ li {
     opacity: .6;
 }
 
+.greeting {
+    font-size: 40px;
+    padding-top: 0rem;
+}
+
 .title-container,
 .edit-title-container {
     height: 100%;
