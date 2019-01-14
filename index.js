@@ -132,9 +132,12 @@ app.get('/signup', (req, res) => {
 app.post('/signup', (req, res) => {
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
-    const email = req.body.email1;
+    const email = req.body.email;
     const username = req.body.username;
     const password = req.body.password;
+
+    console.log("hey this is the form data")
+    console.log(req.body)
 
     User.createUser(firstname, lastname, email, username, password)
         .catch(() => {
@@ -167,7 +170,7 @@ app.post('/login', (req, res) => {
             .then(result => {
                 if (result.passwordDoesMatch(thePassword)) {
                     req.session.user = result;
-                    res.redirect(`/dashboard`);
+                    res.redirect('/dashboard');
                 } else {
                     res.redirect('/login');
                 }
@@ -179,6 +182,8 @@ app.post('/logout', (req, res) => {
 
     req.session.destroy(() => {
         req.session = null;
+        console.log("Session destroyed");
+        console.log(req.session);
         res.redirect('/');
     });
 })
@@ -192,6 +197,7 @@ app.post('/logout', (req, res) => {
 // Register Product
 // Welcome Dashbaord Page Once Logged In
 app.get('/dashboard', protectRoute, (req, res) => {
+    console.log(req.session);
     const theUser = User.from(req.session.user);
 
     let visitorName;
