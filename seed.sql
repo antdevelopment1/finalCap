@@ -1,6 +1,6 @@
 INSERT INTO users (firstname, lastname, email, username, user_password) 
 VALUES ('April', 'Copes', 'antdevelopment1@gmail.com', 'empathy91', 'lingo2555');
-INSERT INTO users (firstname, lastname, username, email, user_password) 
+INSERT INTO users (firstname, lastname, email, username, user_password) 
 VALUES ('Lauren', 'Wilkerson', 'laurenalyn@gmail.com', 'lillylove123', 'hillpassword456');
 INSERT INTO users (firstname, lastname, email, username, user_password) 
 VALUES ('Chris', 'Cruz', 'killergreen200@yahoo.com', 'userisnamed2', 'password9955');
