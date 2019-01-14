@@ -15,7 +15,7 @@ function editProfilePage() {
             <div class="nav">
                     <li><a href="/dashboard">DASHBOARD</a></li>
                     <form action="/logout" method="POST">
-                        <button>LOGOUT</button>
+                        <button class="editprofile-btn">LOGOUT</button>
                     </form>
             </div>
         </nav>
