@@ -4,16 +4,20 @@
   "description": "## Super Sonic Arduino Fullstack Application",
   "main": "index.js",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "connect-pg-simple": "^5.0.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "node": "^11.6.0",
     "pg-promise": "^8.5.4",
     "twilio": "^3.26.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reset-db": "dropdb psecure; createdb psecure; psql -f schema.sql psecure; psql -f seed.sql psecure; psql psecure < node_modules/connect-pg-simple/table.sql"
   },
   "repository": {
     "type": "git",

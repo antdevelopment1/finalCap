@@ -22,12 +22,6 @@ function registerPage() {
                     <h2>Please fill in the information below to register your product.</h2>
             </div>
                  <form action="/registerProduct" method="post" class="register-product-form">  
-                 <div class="register-form-child">
-                     <label for="username" class="label ">Username:</label>
-                     <div class="field">
-                       <input name="username" id="serialnum"  type="text"  value="" placeholder="Username" class="register-input" required>
-                     </div>
-                   </div>
                    <div class="register-form-child">
                      <label for="serialnum" class="label ">Serial Number:</label>
                      <div class="field">

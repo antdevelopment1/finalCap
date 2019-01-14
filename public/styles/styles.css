@@ -26,7 +26,6 @@ li {
     list-style: none;
 }
 
-
 .landing-page,
 .edit-profile-page { 
     animation: .7s fadein .4s forwards;
@@ -74,23 +73,39 @@ li {
     font-size: 1.6rem;
 }
 
-.nav-container .nav li a {
+.nav-container .nav li a,
+.nav-container .nav li button {
     /* outline: 1px solid blue; */
     padding-bottom: .3rem;
     transition: border-bottom .3s ease-out .2s, opacity .3s ease-in-out .3s;
     opacity: .8;
 }
 
-.nav-container .nav li a:hover {
+.nav-container .nav li a:hover,
+.nav-container .nav li button:hover {
     border-bottom: 1px solid rgba(0, 0, 0, .9); 
     opacity: .6;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    margin: 5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.greeting {
+    font-size: 40px;
+    padding-top: 0rem;
 }
 
 .title-container,
 .edit-title-container {
     height: 100%;
     width: 100%;
-    padding: 11rem 0 0 0;
+    padding: 6rem 0 8rem 0;
     /* outline: 13px solid red; */
     display: flex;
     flex-direction: column;
@@ -130,7 +145,7 @@ li {
 .dashboard-title {
     color: rgba(0, 0, 0, .6);
     text-shadow: 2px 2px 2px #333;
-    font-size: 4.5rem;
+    font-size: 4.3rem;
 }
 
 .title-p {
@@ -151,7 +166,7 @@ li {
     height: 100%;
     width: 70%;
     margin: 0 auto 12rem auto;
-    padding: 4rem 1rem;
+    padding: 0 1rem 8rem 1rem;
     display: flex;
     justify-content: center;
     /* outline: 1px solid white; */
@@ -159,7 +174,7 @@ li {
 
 .edit-button-container-top {
     margin-bottom: 0;
-    margin-top: 6rem;
+    margin-top: 2rem;
     padding-bottom: 1rem;
 }
 
@@ -215,6 +230,11 @@ li {
         margin-top: 1rem;
         padding-top: 1.5rem;
     }
+
+
+    .edit-title-container {
+        padding-bottom: 3rem;
+    }
     
 
     .edit-button-container-top,
@@ -251,6 +271,7 @@ li {
     .button-container {
         /* outline: 1px solid white; */
         padding: 0;
+        margin-top: 2rem;
         margin-bottom: 9rem;
     }
 
@@ -259,7 +280,9 @@ li {
     }
 
     .dashboard-btns {
-        margin-top: 1rem;
+        /* outline: 1px solid red; */
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     .editbtn,
@@ -270,6 +293,13 @@ li {
 }
 
 @media screen and (max-width: 1100px) {
+    button {
+        font-size: 21px;
+        margin: 5px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+    }
+    
     .title {
         font-size: 4.5rem;
 
@@ -281,10 +311,6 @@ li {
 
     .dashboard-title {
         font-size: 4rem;
-    }
-
-    .dashboard-btns {
-        margin-top: 1rem;
     }
 
     .editbtn,
@@ -351,6 +377,11 @@ li {
         font-size: 3.4rem;
         line-height: 4.7rem;
         /* outline: 1px solid red; */
+    }
+
+
+    .edit-title-container {
+        padding-bottom: 1.5rem;
     }
 
 
@@ -451,13 +482,22 @@ li {
         line-height: 4rem;
     }
 
+    .dashboard-btns {
+        margin-top: 2rem;
+    }
+
+
+    .edit-title-container {
+        padding-bottom: 0rem;
+    }
+
     .button-container,
     .dashboard-btns {
         /* padding-top: 1rem; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
         width: 70%;
     }
 
@@ -1029,7 +1069,7 @@ form {
     height: 100%;
     width: 100%;
     display: flex;
-    outline: 1px solid white;
+    /* outline: 1px solid white; */
     justify-content: center;
     align-items: center;
 }
@@ -1041,12 +1081,12 @@ form {
     text-align: center;
     height: 100%;
     width: 60%;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     margin-top: 0;
 }
 
 .main-content {
-    outline: 2px solid green;
+    /* outline: 2px solid green; */
     height: 100%;
     width: 100%;
     display: flex;
@@ -1055,7 +1095,7 @@ form {
 }
 
 .lg-p {
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
     height: 100%;
     width: 100%;
     margin: 0 auto;
@@ -1067,7 +1107,7 @@ form {
 }
 
 .lg-p p {
-    outline: 1px solid yellow;
+    /* outline: 1px solid yellow; */
     height: 100%;
     width: 60%;
     padding: 1rem 2rem;
@@ -1077,7 +1117,7 @@ form {
     outline: 2px solid green;
     height: 100%;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1088,7 +1128,7 @@ form {
 }
 
 .img-container {
-    outline: 1px solid yellow;
+    /* outline: 1px solid yellow; */
     height: 100%;
     width: 50%;
     display: flex;
@@ -1097,10 +1137,11 @@ form {
 }
 
 .img {
-    max-height: 150px;
-    min-height: 150px;
-    max-width: 150px;
-    min-width: 150px;
+    max-height: 350px;
+    min-height: 350px;
+    max-width: 350px;
+    min-width: 350px;
+    border-radius: 10px;
 }
 
 .p-container {
@@ -1110,7 +1151,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 2px solid orange;
+    /* outline: 2px solid orange; */
 }
 
 .p-container p {

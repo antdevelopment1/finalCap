@@ -1,4 +1,6 @@
 const db = require('./db');
+const bcrypt = require('bcrypt-nodejs');
+const saltRounds = 10;
 
 class User {
 
@@ -12,11 +14,9 @@ class User {
     }
 
     passwordDoesMatch(thePassword) {
-        return this.user_password === thePassword;
+        const didMatch = bcrypt.compareSync(thePassword, this.user_password);
+        return didMatch;
     }
-
-    
-
     
     // =====================
     //      Create User
@@ -24,13 +24,18 @@ class User {
 
     // Create a new user
     static createUser(firstname, lastname, email, username, user_password) {
+
+        const salt = bcrypt.genSaltSync(saltRounds);
+        const hash = bcrypt.hashSync(user_password, salt);
+
         return db.one(`
         insert into users (firstname, lastname, email, username, user_password) 
         values($1, $2, $3, $4, $5) returning id, firstname, lastname, email, username, user_password`, 
-        [firstname, lastname, email, username, user_password])
+        [firstname, lastname, email, username, hash])
             .then(result => {
-                const newUser = new User(result.id, firstname, lastname, email, username, user_password);
-                return newUser;
+                console.log(result)
+                // const newUser = new User(result.id, firstname, lastname, email, username, user_password);
+                // return newUser;
             })
     }
 
@@ -38,6 +43,17 @@ class User {
     // =====================
     //     Retrieve User
     // =====================
+
+    static from(userObj) {
+        const id = userObj.id;
+        const firstname = userObj.firstname;
+        const lastname = userObj.lastname;
+        const email = userObj.email;
+        const username = userObj.username;
+        const user_password = userObj.user_password;
+
+        return new User(id, firstname, lastname, email, username, user_password);
+    }
 
      // Retrieve all users
      static getAllUsers() {
