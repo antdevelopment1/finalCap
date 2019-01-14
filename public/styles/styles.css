@@ -113,7 +113,7 @@ li {
 .edit-title {
     width: 100%;
     padding: 0 1rem;
-    font-size: 5.8rem;
+    font-size: 6rem;
     color: white;
     line-height: 7rem;
     letter-spacing: 1rem;
@@ -256,6 +256,7 @@ li {
     .button-container {
         /* outline: 1px solid white; */
         padding: 0;
+        margin-top: 2rem;
         margin-bottom: 9rem;
     }
 
