@@ -14,7 +14,12 @@ function dashboardPage(content) {
         <nav class="nav-container">
             <div class="nav">
                     <li><a href="/">HOME</a></li>
-                    <li><a href="/">LOGOUT</a></li>
+                    <li>
+                    <form action="/logout" method="POST">
+                        <button>LOGOUT</button>
+                    </form>
+                    
+                    </li>
             </div>
         </nav>
         <div class="title-container">
