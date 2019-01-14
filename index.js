@@ -1,16 +1,36 @@
+// =======================================
+//       Private Info Module Imports
+// =======================================
 require('dotenv').config();
+
+// ================================
+//       NPM Module Imports
+// ================================
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_TOKEN);
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const pgSession = require('connect-pg-simple')(session);
 
+// ================================
+//       Database Module Imports
+// ================================
+const db = require('./models/db');
+
+// ================================
+//       Class Module Imports
+// ================================
 const User = require('./models/User');
 const Product = require('./models/Product');
 
+
+// ===============================================
+//       Public & Body Parser Module Imports
+// ===============================================
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 
 // ================================
 //       Views Module Imports
@@ -26,23 +46,65 @@ const editPasswordPage = require('./views/editPassword');
 const editUsernamePage = require('./views/editUsername');
 const editPhoneNumberPage = require('./views/editPhoneNumber');
 const editEmailPage = require('./views/editEmail');
-// app.post('/', (req, res) => {
-//     console.log(req.body);
-//     res.send(
-//         {
-//             wifiPass: "9020mndwmodw",
-//             wifinet: "9393jhdjdd"
-//         }
-//     );
-// })
+
+// Sessions setup to track user
+app.use(session({
+    store: new pgSession({
+        pgPromise: db
+    }),
+    secret: 'abc123kasfsdbukbfrkqwuehnfioaebgfskdfhgcniw3y4fto7scdghlusdhbv',
+    saveUninitialized: false,
+    cookie: { 
+        maxAge: 30 * 24 * 60 * 60 * 1000 
+    } 
+}));
+
+function protectRoute(req, res, next) {
+    let isLoggedIn = req.session.user ? true : false;
+
+    if (isLoggedIn) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
+
+app.use((req, res, next) => {
+    let isLoggedIn = req.session.user ? true : false;
+    console.log(req.session.user);
+
+    next();
+})
+
+
+
+// =======================================
+//       Intruder GET / POST Requests
+// =======================================
+
+app.post('/', (req, res) => {
+    console.log(req.body);
+    res.send(
+        "Looks like you are posting to local host 3000"
+    );
+})
 
 app.post('/intruder', (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
     // client.messages
     // .create({
     //     body: 'Intruder detected. Please check your personal belongings.',
     //     from: '+15709191853',
     //     to: '+18622791359'
+    // })
+    // .then(message => console.log(message.sid))
+    // .done();
+
+    // client.messages
+    // .create({
+    //     body: 'Intruder detected again. Please check your personal belongings.',
+    //     from: '+15709191853',
+    //     to: '+14235822300'
     // })
     // .then(message => console.log(message.sid))
     // .done();
@@ -76,7 +138,8 @@ app.post('/signup', (req, res) => {
 
     User.createUser(firstname, lastname, email, username, password)
         .then(newUser => {
-            res.redirect('/login');
+            req.session.user = newUser;
+            res.redirect('/dashboard');
             console.log("User has been added");
         });
 })
@@ -100,6 +163,7 @@ app.post('/login', (req, res) => {
             })
             .then(result => {
                 if (result.passwordDoesMatch(thePassword)) {
+                    req.session.user = result;
                     res.redirect(`/dashboard`);
                 } else {
                     res.redirect('/login');
@@ -109,7 +173,11 @@ app.post('/login', (req, res) => {
 
 // Logout Post Request
 app.post('/logout', (req, res) => {
-    res.send(homepage());
+
+    req.session.destroy(() => {
+        req.session = null;
+        res.redirect('/');
+    });
 })
 
 
@@ -120,12 +188,14 @@ app.post('/logout', (req, res) => {
 
 // Register Product
 // Welcome Dashbaord Page Once Logged In
-app.get(`/dashboard`, (req, res) => {
-    res.send(dashboardPage());
-})
+app.get('/dashboard', protectRoute, (req, res) => {
+    const theUser = User.from(req.session.user);
 
-app.get(`/dashboard`, (req, res) => {
-    res.send(dashboardPage());
+    let visitorName;
+    if (req.session.user) {
+        visitorName = req.session.user.firstname;
+    }
+    res.send(dashboardPage(`<p class="greeting">Welcome, ${visitorName}</p>`, req.session.user));
 })
 
 // Register Product Page Get Request
@@ -135,33 +205,52 @@ app.get('/registerProduct', (req, res) => {
 
 // Register Product Page Post Request
 app.post('/registerProduct', (req, res) => {
-    const username = req.body.username;
+    
+    const user_id = req.session.user.id;
     const serialNum = req.body.serialnum;
     const phoneNumber = req.body.tel1;
-    User.getUserByUsername(username)
-            .catch(err => {
-                console.log('There was an error retriving you info');
+    console.log(req.session.user);
+
+    Product.getProductBySerialNumber(serialNum)
+        .catch(err => {
+            console.log('This product key has already been registered');
+            res.redirect('/registerProduct');
+        })
+        .then(result => {
+            if (result ===  undefined) {
                 res.redirect('/registerProduct');
-            })
-            .then(result => {
-                const user_id = result.id;
-                Product.getProductBySerialNumber(serialNum)
-                    .catch(err => {
-                        console.log('There was an error retriving that serial number');
-                        res.redirect('/registerProduct');
-                    })
-                    .then(result => {
-                        if (result ===  undefined) {
-                            res.redirect('/registerProduct');
-                        } else {
-                            Product.registerProduct(serialNum, phoneNumber, user_id)
-                            .then(result => {
-                                console.log(result);
-                            })
-                            res.redirect('/editProfile');
-                        }
-                    })
-            })
+            } else {
+                Product.registerProduct(serialNum, phoneNumber, user_id)
+                .then(result => {
+                    console.log(result);
+                })
+                res.redirect('/editProfile');
+            }
+        })
+    // User.getUserByUsername(username)
+    //         .catch(err => {
+    //             console.log('There was an error retriving you info');
+    //             res.redirect('/registerProduct');
+    //         })
+    //         .then(result => {
+    //             const user_id = result.id;
+    //             Product.getProductBySerialNumber(serialNum)
+    //                 .catch(err => {
+    //                     console.log('There was an error retriving that serial number');
+    //                     res.redirect('/registerProduct');
+    //                 })
+    //                 .then(result => {
+    //                     if (result ===  undefined) {
+    //                         res.redirect('/registerProduct');
+    //                     } else {
+    //                         Product.registerProduct(serialNum, phoneNumber, user_id)
+    //                         .then(result => {
+    //                             console.log(result);
+    //                         })
+    //                         res.redirect('/editProfile');
+    //                     }
+    //                 })
+    //         })
     
 })
 
