@@ -26,25 +26,58 @@ function buildProcessPage() {
                     Consectetur purus ut faucibus pulvinar. Massa sed elementum tempus egestas sed sed risus pretium. 
                     Risus at ultrices mi tempus imperdiet. Tempor orci dapibus ultrices in iaculis. 
                     Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Sodales neque sodales ut etiam sit. 
-                    Diam sit amet nisl suscipit adipiscing bibendum est ultricies.
+                    Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Viverra justo nec ultrices dui sapien eget mi.
                     </p>
                 </div>
                 <div class="content content1">
                     <div class="img-container">
-                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                        <img src="./../images/sensorHornLightClose.jpg" alt="" class="img">
                     </div>
                     <div class="p-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Viverra justo nec ultrices dui sapien eget mi.
                         </p>
                     </div>
                 </div>
                 <div class="content content2">
                     <div class="img-container">
-                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                        <img src="./../images/arduinoUno.jpg" alt="" class="img">
                     </div>
                     <div class="p-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
+                <div class="content content1">
+                    <div class="img-container">
+                        <img src="./../images/wifiChip.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi.
+                        </p>
+                    </div>
+                </div>
+                <div class="content content2">
+                    <div class="img-container">
+                        <img src="./../images/voltageDivide.jpg" alt="" class="img">
+                    </div>
+                    <div class="p-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Viverra justo nec ultrices dui sapien eget mi.
                         </p>
                     </div>
@@ -55,6 +88,8 @@ function buildProcessPage() {
                     </div>
                     <div class="p-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Viverra justo nec ultrices dui sapien eget mi.
                         </p>
                     </div>
@@ -65,16 +100,8 @@ function buildProcessPage() {
                     </div>
                     <div class="p-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Viverra justo nec ultrices dui sapien eget mi.
-                        </p>
-                    </div>
-                </div>
-                <div class="content content1">
-                    <div class="img-container">
-                        <img src="./../images/tempImg.jpg" alt="" class="img">
-                    </div>
-                    <div class="p-container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Viverra justo nec ultrices dui sapien eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Viverra justo nec ultrices dui sapien eget mi.
                         </p>
                     </div>

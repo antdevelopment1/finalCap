@@ -33,7 +33,7 @@ class User {
         values($1, $2, $3, $4, $5) returning id, firstname, lastname, email, username, user_password`, 
         [firstname, lastname, email, username, hash])
             .then(result => {
-                console.log(result)
+                // console.log(result)
                 // const newUser = new User(result.id, firstname, lastname, email, username, user_password);
                 // return newUser;
             })
