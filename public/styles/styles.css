@@ -94,6 +94,7 @@ button {
     margin: 5px;
     font-weight: 600;
     letter-spacing: 1.5px;
+    /* outline: 1px solid red; */
 }
 
 .greeting {
@@ -598,6 +599,14 @@ form {
     width: 100%;
 }
 
+.register-btn,
+.editprofile-btn {
+
+    margin-top: 18px;
+    color: rgba(0, 0, 0, .7);
+    /* outline: 1px solid red; */
+}
+
 .register-form-title,
 .login-form-title,
 .signup-form-title,
@@ -1091,6 +1100,7 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 6rem;
 
 }
 
@@ -1109,12 +1119,13 @@ form {
 .lg-p p {
     /* outline: 1px solid yellow; */
     height: 100%;
-    width: 60%;
-    padding: 1rem 2rem;
+    width: 55%;
+    padding: 2rem 2rem;
+    text-align: justify;
 }
 
 .content {
-    outline: 2px solid green;
+    /* outline: 2px solid green; */
     height: 100%;
     width: 100%;
     padding: 1rem 2rem;
@@ -1156,19 +1167,120 @@ form {
 
 .p-container p {
     width: 80%;
+    text-align: justify;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
+    .lg-p p {
+        width: 60%;
+
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .lg-p p {
+        width: 70%;
+
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
     .content1,
     .content2 {
         flex-direction: column;
     }
 
+    .lg-p p {
+        /* outline: 1px solid red; */
+       width: 75%;
+    }
+
+
     .img-container {
-        width: 40%;
+        width: 50%;
     }
     .p-container {
-        width: 70%;
-        margin-top: 1rem;
+        width: 85%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
+
+    .img {
+        max-height: 300px;
+        min-height: 300px;
+        max-width: 300px;
+        min-width: 300px;
+        border-radius: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .building-title {
+          font-size: 2.5rem;
+        }
+
+        .lg-p {
+           padding-left: 0;
+           padding-right: 0;
+    
+        }
+
+        .lg-p p{
+            padding-left: 0;
+            padding-right: 0;
+     
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .building-title {
+          font-size: 2.2rem;
+        }
+
+        .lg-p p{
+           line-height: 1.3rem;
+    
+        }
+
+        .p-container {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .p-container p {
+            width: 100%;
+            text-align: justify;
+            line-height: 1.3rem;
+        }
+
+    }
+
+    @media screen and (max-width: 500px) {
+
+        .building-title {
+          font-size: 1.7rem;
+        }
+
+        .content {
+            padding-right: .5rem;
+            padding-left: .5rem;
+        }
+
+        .lg-p p{
+           line-height: 1.3rem;
+    
+        }
+
+        .p-container p {
+           
+            line-height: 1.3rem;
+        }
+
+    }
+
+
+    
 }

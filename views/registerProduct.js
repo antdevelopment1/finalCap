@@ -15,7 +15,7 @@ function registerPage() {
                     <div class="nav register-nav">
                             <li><a href="/dashboard">DASHBOARD</a></li>
                             <form action="/logout" method="POST">
-                                 <button>LOGOUT</button>
+                                 <button class="register-btn">LOGOUT</button>
                             </form>
                     </div>
                 </nav>

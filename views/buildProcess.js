@@ -26,8 +26,7 @@ function buildProcessPage() {
                     Consectetur purus ut faucibus pulvinar. Massa sed elementum tempus egestas sed sed risus pretium. 
                     Risus at ultrices mi tempus imperdiet. Tempor orci dapibus ultrices in iaculis. 
                     Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Sodales neque sodales ut etiam sit. 
-                    Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Viverra justo nec ultrices dui sapien eget mi.
+                    Diam sit amet nisl suscipit adipiscing bibendum est ultricies.
                     </p>
                 </div>
                 <div class="content content1">
@@ -84,7 +83,7 @@ function buildProcessPage() {
                 </div>
                 <div class="content content1">
                     <div class="img-container">
-                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                        <img src="./../images/featherBottom.png" alt="" class="img">
                     </div>
                     <div class="p-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -96,7 +95,7 @@ function buildProcessPage() {
                 </div>
                 <div class="content content2">
                     <div class="img-container">
-                        <img src="./../images/tempImg.jpg" alt="" class="img">
+                        <img src="./../images/unoTop.png" alt="" class="img">
                     </div>
                     <div class="p-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
