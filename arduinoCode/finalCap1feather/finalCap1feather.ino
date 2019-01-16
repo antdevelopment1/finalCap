@@ -30,7 +30,7 @@
         
             Serial.println("Connected to wifi network");
     
-            http.begin("http://10.150.40.54:3000/");
+            http.begin("http://10.150.40.126:3000/");
             http.addHeader("Content-Type", "application/x-www-form-urlencoded");
             
             int httpCode = http.POST("success=Wifi Network is connected");
@@ -50,7 +50,7 @@
               Serial.println("Intruder detected. Please check your belongings.");
               Serial.print("My current analog value value is ");
               Serial.println(adcvalue);
-              http.begin("http://10.150.40.54:3000/intruder");
+              http.begin("http://10.150.40.126:3000/intruder");
               http.addHeader("Content-Type", "application/x-www-form-urlencoded");
               int httpCode = http.POST("Intruder=Someone has triggered the alarm. Please check valuables: hello");
               String payload = http.getString();
